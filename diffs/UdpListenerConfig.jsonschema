@@ -1,0 +1,11 @@
+4,13d3
+<         "config": {
+<             "oneOf": [
+<                 {
+<                     "type": "null"
+<                 },
+<                 {
+<                     "type": "string"
+<                 }
+<             ]
+<         },

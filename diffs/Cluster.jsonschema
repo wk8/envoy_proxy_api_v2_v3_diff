@@ -1,0 +1,177 @@
+652,705d651
+<         "drain_connections_on_host_removal": {
+<             "items": {
+<                 "$schema": "http://json-schema.org/draft-04/schema#",
+<                 "properties": {
+<                     "match": {
+<                         "oneOf": [
+<                             {
+<                                 "type": "null"
+<                             },
+<                             {
+<                                 "type": "string"
+<                             }
+<                         ]
+<                     },
+<                     "name": {
+<                         "oneOf": [
+<                             {
+<                                 "type": "null"
+<                             },
+<                             {
+<                                 "type": "string"
+<                             }
+<                         ]
+<                     },
+<                     "transport_socket": {
+<                         "oneOf": [
+<                             {
+<                                 "type": "null"
+<                             },
+<                             {
+<                                 "type": "string"
+<                             }
+<                         ]
+<                     }
+<                 },
+<                 "additionalProperties": true,
+<                 "oneOf": [
+<                     {
+<                         "type": "null"
+<                     },
+<                     {
+<                         "type": "object"
+<                     }
+<                 ]
+<             },
+<             "oneOf": [
+<                 {
+<                     "type": "null"
+<                 },
+<                 {
+<                     "type": "array"
+<                 }
+<             ]
+<         },
+760,813d705
+<         "extension_protocol_options": {
+<             "items": {
+<                 "$schema": "http://json-schema.org/draft-04/schema#",
+<                 "properties": {
+<                     "match": {
+<                         "oneOf": [
+<                             {
+<                                 "type": "null"
+<                             },
+<                             {
+<                                 "type": "string"
+<                             }
+<                         ]
+<                     },
+<                     "name": {
+<                         "oneOf": [
+<                             {
+<                                 "type": "null"
+<                             },
+<                             {
+<                                 "type": "string"
+<                             }
+<                         ]
+<                     },
+<                     "transport_socket": {
+<                         "oneOf": [
+<                             {
+<                                 "type": "null"
+<                             },
+<                             {
+<                                 "type": "string"
+<                             }
+<                         ]
+<                     }
+<                 },
+<                 "additionalProperties": true,
+<                 "oneOf": [
+<                     {
+<                         "type": "null"
+<                     },
+<                     {
+<                         "type": "object"
+<                     }
+<                 ]
+<             },
+<             "oneOf": [
+<                 {
+<                     "type": "null"
+<                 },
+<                 {
+<                     "type": "array"
+<                 }
+<             ]
+<         },
+922c814
+<         "hosts": {
+---
+>         "http2_protocol_options": {
+976c868
+<         "http2_protocol_options": {
+---
+>         "http_protocol_options": {
+1030c922
+<         "http_protocol_options": {
+---
+>         "ignore_health_on_host_removal": {
+1894,1947d1785
+<         "tls_context": {
+<             "items": {
+<                 "$schema": "http://json-schema.org/draft-04/schema#",
+<                 "properties": {
+<                     "match": {
+<                         "oneOf": [
+<                             {
+<                                 "type": "null"
+<                             },
+<                             {
+<                                 "type": "string"
+<                             }
+<                         ]
+<                     },
+<                     "name": {
+<                         "oneOf": [
+<                             {
+<                                 "type": "null"
+<                             },
+<                             {
+<                                 "type": "string"
+<                             }
+<                         ]
+<                     },
+<                     "transport_socket": {
+<                         "oneOf": [
+<                             {
+<                                 "type": "null"
+<                             },
+<                             {
+<                                 "type": "string"
+<                             }
+<                         ]
+<                     }
+<                 },
+<                 "additionalProperties": true,
+<                 "oneOf": [
+<                     {
+<                         "type": "null"
+<                     },
+<                     {
+<                         "type": "object"
+<                     }
+<                 ]
+<             },
+<             "oneOf": [
+<                 {
+<                     "type": "null"
+<                 },
+<                 {
+<                     "type": "array"
+<                 }
+<             ]
+<         },

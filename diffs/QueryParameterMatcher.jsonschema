@@ -1,0 +1,22 @@
+24,33d23
+<         "regex": {
+<             "oneOf": [
+<                 {
+<                     "type": "null"
+<                 },
+<                 {
+<                     "type": "string"
+<                 }
+<             ]
+<         },
+43,52d32
+<         },
+<         "value": {
+<             "oneOf": [
+<                 {
+<                     "type": "null"
+<                 },
+<                 {
+<                     "type": "string"
+<                 }
+<             ]
