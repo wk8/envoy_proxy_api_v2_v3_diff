@@ -1,0 +1,128 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "address": {
+            "enum": [
+                "TCP",
+                0,
+                "UDP",
+                1
+            ],
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "ipv4_compat": {
+            "enum": [
+                "TCP",
+                0,
+                "UDP",
+                1
+            ],
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "named_port": {
+            "enum": [
+                "TCP",
+                0,
+                "UDP",
+                1
+            ],
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "port_value": {
+            "enum": [
+                "TCP",
+                0,
+                "UDP",
+                1
+            ],
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "protocol": {
+            "enum": [
+                "TCP",
+                0,
+                "UDP",
+                1
+            ],
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "resolver_name": {
+            "enum": [
+                "TCP",
+                0,
+                "UDP",
+                1
+            ],
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        }
+    },
+    "additionalProperties": true,
+    "oneOf": [
+        {
+            "type": "null"
+        },
+        {
+            "type": "object"
+        }
+    ]
+}

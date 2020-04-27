@@ -1,0 +1,2282 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "alt_stat_name": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "circuit_breakers": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "cleanup_interval": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "close_connections_on_host_health_failure": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "cluster_type": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "common_http_protocol_options": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "common_lb_config": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "connect_timeout": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "dns_failure_refresh_rate": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "dns_lookup_family": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "dns_refresh_rate": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "dns_resolvers": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "eds_cluster_config": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "filters": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "health_checks": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "http2_protocol_options": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "http_protocol_options": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "ignore_health_on_host_removal": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "lb_policy": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "lb_subset_config": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "least_request_lb_config": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "load_assignment": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "load_balancing_policy": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "lrs_server": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "max_requests_per_connection": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "metadata": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "name": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "original_dst_lb_config": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "outlier_detection": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "per_connection_buffer_limit_bytes": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "protocol_selection": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "respect_dns_ttl": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "ring_hash_lb_config": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "track_timeout_budgets": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "transport_socket": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "transport_socket_matches": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "type": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "typed_extension_protocol_options": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "upstream_bind_config": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "upstream_connection_options": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "upstream_http_protocol_options": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "use_tcp_for_dns_lookups": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "match": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "name": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    },
+                    "transport_socket": {
+                        "oneOf": [
+                            {
+                                "type": "null"
+                            },
+                            {
+                                "type": "string"
+                            }
+                        ]
+                    }
+                },
+                "additionalProperties": true,
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "object"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        }
+    },
+    "additionalProperties": true,
+    "oneOf": [
+        {
+            "type": "null"
+        },
+        {
+            "type": "object"
+        }
+    ]
+}

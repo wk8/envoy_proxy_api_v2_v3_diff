@@ -1,0 +1,198 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "api_type": {
+            "enum": [
+                "DEPRECATED_AND_UNAVAILABLE_DO_NOT_USE",
+                0,
+                "REST",
+                1,
+                "GRPC",
+                2,
+                "DELTA_GRPC",
+                3
+            ],
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "cluster_names": {
+            "enum": [
+                "DEPRECATED_AND_UNAVAILABLE_DO_NOT_USE",
+                0,
+                "REST",
+                1,
+                "GRPC",
+                2,
+                "DELTA_GRPC",
+                3
+            ],
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "grpc_services": {
+            "enum": [
+                "DEPRECATED_AND_UNAVAILABLE_DO_NOT_USE",
+                0,
+                "REST",
+                1,
+                "GRPC",
+                2,
+                "DELTA_GRPC",
+                3
+            ],
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "rate_limit_settings": {
+            "enum": [
+                "DEPRECATED_AND_UNAVAILABLE_DO_NOT_USE",
+                0,
+                "REST",
+                1,
+                "GRPC",
+                2,
+                "DELTA_GRPC",
+                3
+            ],
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "refresh_delay": {
+            "enum": [
+                "DEPRECATED_AND_UNAVAILABLE_DO_NOT_USE",
+                0,
+                "REST",
+                1,
+                "GRPC",
+                2,
+                "DELTA_GRPC",
+                3
+            ],
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "request_timeout": {
+            "enum": [
+                "DEPRECATED_AND_UNAVAILABLE_DO_NOT_USE",
+                0,
+                "REST",
+                1,
+                "GRPC",
+                2,
+                "DELTA_GRPC",
+                3
+            ],
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "set_node_on_first_message_only": {
+            "enum": [
+                "DEPRECATED_AND_UNAVAILABLE_DO_NOT_USE",
+                0,
+                "REST",
+                1,
+                "GRPC",
+                2,
+                "DELTA_GRPC",
+                3
+            ],
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        },
+        "transport_api_version": {
+            "enum": [
+                "DEPRECATED_AND_UNAVAILABLE_DO_NOT_USE",
+                0,
+                "REST",
+                1,
+                "GRPC",
+                2,
+                "DELTA_GRPC",
+                3
+            ],
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "integer"
+                },
+                {
+                    "type": "null"
+                }
+            ]
+        }
+    },
+    "additionalProperties": true,
+    "oneOf": [
+        {
+            "type": "null"
+        },
+        {
+            "type": "object"
+        }
+    ]
+}

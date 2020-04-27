@@ -1,0 +1,234 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "allow_credentials": {
+            "items": {
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "string"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "allow_headers": {
+            "items": {
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "string"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "allow_methods": {
+            "items": {
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "string"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "allow_origin": {
+            "items": {
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "string"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "allow_origin_regex": {
+            "items": {
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "string"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "allow_origin_string_match": {
+            "items": {
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "string"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "enabled": {
+            "items": {
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "string"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "expose_headers": {
+            "items": {
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "string"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "filter_enabled": {
+            "items": {
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "string"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "max_age": {
+            "items": {
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "string"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        },
+        "shadow_enabled": {
+            "items": {
+                "oneOf": [
+                    {
+                        "type": "null"
+                    },
+                    {
+                        "type": "string"
+                    }
+                ]
+            },
+            "oneOf": [
+                {
+                    "type": "null"
+                },
+                {
+                    "type": "array"
+                }
+            ]
+        }
+    },
+    "additionalProperties": true,
+    "oneOf": [
+        {
+            "type": "null"
+        },
+        {
+            "type": "object"
+        }
+    ]
+}
