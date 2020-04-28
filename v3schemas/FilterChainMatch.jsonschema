@@ -1,0 +1,112 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "destination_port": {
+            "$ref": "google.protobuf.UInt32Value",
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "prefix_ranges": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "$ref": "envoy.config.core.v3.CidrRange"
+            },
+            "properties": {},
+            "type": "array"
+        },
+        "address_suffix": {
+            "properties": {},
+            "type": "string"
+        },
+        "suffix_len": {
+            "$ref": "google.protobuf.UInt32Value",
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "source_type": {
+            "properties": {},
+            "enum": [
+                "ANY",
+                0,
+                "SAME_IP_OR_LOOPBACK",
+                1,
+                "EXTERNAL",
+                2
+            ],
+            "oneOf": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "integer"
+                }
+            ]
+        },
+        "source_prefix_ranges": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "$ref": "envoy.config.core.v3.CidrRange"
+            },
+            "properties": {},
+            "type": "array"
+        },
+        "source_ports": {
+            "items": {
+                "type": "integer"
+            },
+            "properties": {},
+            "type": "array"
+        },
+        "server_names": {
+            "items": {
+                "type": "string"
+            },
+            "properties": {},
+            "type": "array"
+        },
+        "transport_protocol": {
+            "properties": {},
+            "type": "string"
+        },
+        "application_protocols": {
+            "items": {
+                "type": "string"
+            },
+            "properties": {},
+            "type": "array"
+        }
+    },
+    "additionalProperties": true,
+    "type": "object",
+    "definitions": {
+        "envoy.config.core.v3.CidrRange": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "address_prefix": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "prefix_len": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "envoy.config.core.v3.CidrRange"
+        },
+        "google.protobuf.UInt32Value": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "value": {
+                    "properties": {},
+                    "type": "integer"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "google.protobuf.UInt32Value"
+        }
+    }
+}

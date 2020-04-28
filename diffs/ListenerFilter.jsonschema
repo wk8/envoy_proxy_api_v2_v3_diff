@@ -1,12 +1,44 @@
-12,16d11
-<                     "config": {
-<                         "$ref": "google.protobuf.Struct",
-<                         "additionalProperties": true,
-<                         "type": "object"
-<                     },
-40,109c35
-<     "type": "object",
-<     "definitions": {
+8,12d7
+<         "config": {
+<             "$ref": "google.protobuf.Struct",
+<             "additionalProperties": true,
+<             "type": "object"
+<         },
+28c23
+<             "$ref": "envoy.api.v2.listener.ListenerFilterChainMatchPredicate",
+---
+>             "$ref": "envoy.config.listener.v3.ListenerFilterChainMatchPredicate",
+36c31
+<         "envoy.api.v2.listener.ListenerFilterChainMatchPredicate": {
+---
+>         "envoy.config.listener.v3.ListenerFilterChainMatchPredicate": {
+40c35
+<                     "$ref": "envoy.api.v2.listener.ListenerFilterChainMatchPredicate.MatchSet",
+---
+>                     "$ref": "envoy.config.listener.v3.ListenerFilterChainMatchPredicate.MatchSet",
+45c40
+<                     "$ref": "envoy.api.v2.listener.ListenerFilterChainMatchPredicate.MatchSet",
+---
+>                     "$ref": "envoy.config.listener.v3.ListenerFilterChainMatchPredicate.MatchSet",
+50c45
+<                     "$ref": "envoy.api.v2.listener.ListenerFilterChainMatchPredicate",
+---
+>                     "$ref": "envoy.config.listener.v3.ListenerFilterChainMatchPredicate",
+75c70
+<             "id": "envoy.api.v2.listener.ListenerFilterChainMatchPredicate"
+---
+>             "id": "envoy.config.listener.v3.ListenerFilterChainMatchPredicate"
+77c72
+<         "envoy.api.v2.listener.ListenerFilterChainMatchPredicate.MatchSet": {
+---
+>         "envoy.config.listener.v3.ListenerFilterChainMatchPredicate.MatchSet": {
+83c78
+<                         "$ref": "envoy.api.v2.listener.ListenerFilterChainMatchPredicate"
+---
+>                         "$ref": "envoy.config.listener.v3.ListenerFilterChainMatchPredicate"
+91,158c86
+<             "id": "envoy.api.v2.listener.ListenerFilterChainMatchPredicate.MatchSet"
+<         },
 <         "google.protobuf.Struct": {
 <             "$schema": "http://json-schema.org/draft-04/schema#",
 <             "properties": {
@@ -73,7 +105,5 @@
 <             "additionalProperties": true,
 <             "type": "object",
 <             "id": "google.protobuf.Value"
-<         }
-<     }
 ---
->     "type": "object"
+>             "id": "envoy.config.listener.v3.ListenerFilterChainMatchPredicate.MatchSet"

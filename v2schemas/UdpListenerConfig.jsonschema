@@ -1,44 +1,99 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "properties": {
+        "udp_listener_name": {
+            "properties": {},
+            "type": "string"
+        },
         "config": {
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "string"
-                }
-            ]
+            "$ref": "google.protobuf.Struct",
+            "additionalProperties": true,
+            "type": "object"
         },
         "typed_config": {
-            "oneOf": [
-                {
-                    "type": "null"
+            "properties": {
+                "type_url": {
+                    "properties": {},
+                    "type": "string"
                 },
-                {
+                "value": {
+                    "properties": {},
                     "type": "string"
                 }
-            ]
-        },
-        "udp_listener_name": {
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "string"
-                }
-            ]
+            },
+            "additionalProperties": true,
+            "type": "object"
         }
     },
     "additionalProperties": true,
-    "oneOf": [
-        {
-            "type": "null"
+    "type": "object",
+    "definitions": {
+        "google.protobuf.Struct": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "fields": {
+                    "properties": {},
+                    "additionalProperties": {
+                        "$ref": "google.protobuf.Value",
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "type": "object"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "google.protobuf.Struct"
         },
-        {
-            "type": "object"
+        "google.protobuf.Value": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "null_value": {
+                    "properties": {},
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "integer"
+                        }
+                    ]
+                },
+                "number_value": {
+                    "properties": {},
+                    "type": "number"
+                },
+                "string_value": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "bool_value": {
+                    "properties": {},
+                    "type": "boolean"
+                },
+                "struct_value": {
+                    "$ref": "google.protobuf.Struct",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "list_value": {
+                    "properties": {
+                        "values": {
+                            "items": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "$ref": "google.protobuf.Value"
+                            },
+                            "properties": {},
+                            "type": "array"
+                        }
+                    },
+                    "additionalProperties": true,
+                    "type": "object"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "google.protobuf.Value"
         }
-    ]
+    }
 }

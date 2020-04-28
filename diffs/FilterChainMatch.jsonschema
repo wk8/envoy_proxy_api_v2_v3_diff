@@ -1,0 +1,20 @@
+12c12
+<                 "$ref": "envoy.api.v2.core.CidrRange"
+---
+>                 "$ref": "envoy.config.core.v3.CidrRange"
+31c31
+<                 "LOCAL",
+---
+>                 "SAME_IP_OR_LOOPBACK",
+48c48
+<                 "$ref": "envoy.api.v2.core.CidrRange"
+---
+>                 "$ref": "envoy.config.core.v3.CidrRange"
+82c82
+<         "envoy.api.v2.core.CidrRange": {
+---
+>         "envoy.config.core.v3.CidrRange": {
+97c97
+<             "id": "envoy.api.v2.core.CidrRange"
+---
+>             "id": "envoy.config.core.v3.CidrRange"

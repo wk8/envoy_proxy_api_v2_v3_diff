@@ -5,138 +5,89 @@
             "items": {
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                    "max_connection_pools": {
+                    "priority": {
+                        "properties": {},
                         "oneOf": [
                             {
                                 "type": "string"
                             },
                             {
                                 "type": "integer"
-                            },
-                            {
-                                "type": "null"
                             }
                         ]
                     },
                     "max_connections": {
-                        "oneOf": [
-                            {
-                                "type": "string"
-                            },
-                            {
-                                "type": "integer"
-                            },
-                            {
-                                "type": "null"
-                            }
-                        ]
+                        "$ref": "google.protobuf.UInt32Value",
+                        "additionalProperties": true,
+                        "type": "object"
                     },
                     "max_pending_requests": {
-                        "oneOf": [
-                            {
-                                "type": "string"
-                            },
-                            {
-                                "type": "integer"
-                            },
-                            {
-                                "type": "null"
-                            }
-                        ]
+                        "$ref": "google.protobuf.UInt32Value",
+                        "additionalProperties": true,
+                        "type": "object"
                     },
                     "max_requests": {
-                        "oneOf": [
-                            {
-                                "type": "string"
-                            },
-                            {
-                                "type": "integer"
-                            },
-                            {
-                                "type": "null"
-                            }
-                        ]
+                        "$ref": "google.protobuf.UInt32Value",
+                        "additionalProperties": true,
+                        "type": "object"
                     },
                     "max_retries": {
-                        "oneOf": [
-                            {
-                                "type": "string"
-                            },
-                            {
-                                "type": "integer"
-                            },
-                            {
-                                "type": "null"
-                            }
-                        ]
-                    },
-                    "priority": {
-                        "oneOf": [
-                            {
-                                "type": "string"
-                            },
-                            {
-                                "type": "integer"
-                            },
-                            {
-                                "type": "null"
-                            }
-                        ]
+                        "$ref": "google.protobuf.UInt32Value",
+                        "additionalProperties": true,
+                        "type": "object"
                     },
                     "retry_budget": {
-                        "oneOf": [
-                            {
-                                "type": "string"
+                        "properties": {
+                            "budget_percent": {
+                                "properties": {
+                                    "value": {
+                                        "properties": {},
+                                        "type": "number"
+                                    }
+                                },
+                                "additionalProperties": true,
+                                "type": "object"
                             },
-                            {
-                                "type": "integer"
-                            },
-                            {
-                                "type": "null"
+                            "min_retry_concurrency": {
+                                "$ref": "google.protobuf.UInt32Value",
+                                "additionalProperties": true,
+                                "type": "object"
                             }
-                        ]
+                        },
+                        "additionalProperties": true,
+                        "type": "object"
                     },
                     "track_remaining": {
-                        "oneOf": [
-                            {
-                                "type": "string"
-                            },
-                            {
-                                "type": "integer"
-                            },
-                            {
-                                "type": "null"
-                            }
-                        ]
+                        "properties": {},
+                        "type": "boolean"
+                    },
+                    "max_connection_pools": {
+                        "$ref": "google.protobuf.UInt32Value",
+                        "additionalProperties": true,
+                        "type": "object"
                     }
                 },
                 "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
+                "type": "object"
             },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
+            "properties": {},
+            "type": "array"
         }
     },
     "additionalProperties": true,
-    "oneOf": [
-        {
-            "type": "null"
-        },
-        {
-            "type": "object"
+    "type": "object",
+    "definitions": {
+        "google.protobuf.UInt32Value": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "value": {
+                    "properties": {},
+                    "type": "integer"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "google.protobuf.UInt32Value"
         }
-    ]
+    }
 }

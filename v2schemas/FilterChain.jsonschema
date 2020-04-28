@@ -1,0 +1,1024 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "filter_chain_match": {
+            "properties": {
+                "destination_port": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "prefix_ranges": {
+                    "items": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "$ref": "envoy.api.v2.core.CidrRange"
+                    },
+                    "properties": {},
+                    "type": "array"
+                },
+                "address_suffix": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "suffix_len": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "source_type": {
+                    "properties": {},
+                    "enum": [
+                        "ANY",
+                        0,
+                        "LOCAL",
+                        1,
+                        "EXTERNAL",
+                        2
+                    ],
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "integer"
+                        }
+                    ]
+                },
+                "source_prefix_ranges": {
+                    "items": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "$ref": "envoy.api.v2.core.CidrRange"
+                    },
+                    "properties": {},
+                    "type": "array"
+                },
+                "source_ports": {
+                    "items": {
+                        "type": "integer"
+                    },
+                    "properties": {},
+                    "type": "array"
+                },
+                "server_names": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "properties": {},
+                    "type": "array"
+                },
+                "transport_protocol": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "application_protocols": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "properties": {},
+                    "type": "array"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "tls_context": {
+            "properties": {
+                "common_tls_context": {
+                    "properties": {
+                        "tls_params": {
+                            "properties": {
+                                "tls_minimum_protocol_version": {
+                                    "properties": {},
+                                    "enum": [
+                                        "TLS_AUTO",
+                                        0,
+                                        "TLSv1_0",
+                                        1,
+                                        "TLSv1_1",
+                                        2,
+                                        "TLSv1_2",
+                                        3,
+                                        "TLSv1_3",
+                                        4
+                                    ],
+                                    "oneOf": [
+                                        {
+                                            "type": "string"
+                                        },
+                                        {
+                                            "type": "integer"
+                                        }
+                                    ]
+                                },
+                                "tls_maximum_protocol_version": {
+                                    "properties": {},
+                                    "enum": [
+                                        "TLS_AUTO",
+                                        0,
+                                        "TLSv1_0",
+                                        1,
+                                        "TLSv1_1",
+                                        2,
+                                        "TLSv1_2",
+                                        3,
+                                        "TLSv1_3",
+                                        4
+                                    ],
+                                    "oneOf": [
+                                        {
+                                            "type": "string"
+                                        },
+                                        {
+                                            "type": "integer"
+                                        }
+                                    ]
+                                },
+                                "cipher_suites": {
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "properties": {},
+                                    "type": "array"
+                                },
+                                "ecdh_curves": {
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "properties": {},
+                                    "type": "array"
+                                }
+                            },
+                            "additionalProperties": true,
+                            "type": "object"
+                        },
+                        "tls_certificates": {
+                            "items": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "properties": {
+                                    "certificate_chain": {
+                                        "$ref": "envoy.api.v2.core.DataSource",
+                                        "additionalProperties": true,
+                                        "type": "object"
+                                    },
+                                    "private_key": {
+                                        "$ref": "envoy.api.v2.core.DataSource",
+                                        "additionalProperties": true,
+                                        "type": "object"
+                                    },
+                                    "private_key_provider": {
+                                        "properties": {
+                                            "provider_name": {
+                                                "properties": {},
+                                                "type": "string"
+                                            },
+                                            "config": {
+                                                "$ref": "google.protobuf.Struct",
+                                                "additionalProperties": true,
+                                                "type": "object"
+                                            },
+                                            "typed_config": {
+                                                "$ref": "google.protobuf.Any",
+                                                "additionalProperties": true,
+                                                "type": "object"
+                                            }
+                                        },
+                                        "additionalProperties": true,
+                                        "type": "object"
+                                    },
+                                    "password": {
+                                        "$ref": "envoy.api.v2.core.DataSource",
+                                        "additionalProperties": true,
+                                        "type": "object"
+                                    },
+                                    "ocsp_staple": {
+                                        "$ref": "envoy.api.v2.core.DataSource",
+                                        "additionalProperties": true,
+                                        "type": "object"
+                                    },
+                                    "signed_certificate_timestamp": {
+                                        "items": {
+                                            "$schema": "http://json-schema.org/draft-04/schema#",
+                                            "$ref": "envoy.api.v2.core.DataSource"
+                                        },
+                                        "properties": {},
+                                        "type": "array"
+                                    }
+                                },
+                                "additionalProperties": true,
+                                "type": "object"
+                            },
+                            "properties": {},
+                            "type": "array"
+                        },
+                        "tls_certificate_sds_secret_configs": {
+                            "items": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "$ref": "envoy.api.v2.auth.SdsSecretConfig"
+                            },
+                            "properties": {},
+                            "type": "array"
+                        },
+                        "validation_context": {
+                            "$ref": "envoy.api.v2.auth.CertificateValidationContext",
+                            "additionalProperties": true,
+                            "type": "object"
+                        },
+                        "validation_context_sds_secret_config": {
+                            "$ref": "envoy.api.v2.auth.SdsSecretConfig",
+                            "additionalProperties": true,
+                            "type": "object"
+                        },
+                        "combined_validation_context": {
+                            "properties": {
+                                "default_validation_context": {
+                                    "$ref": "envoy.api.v2.auth.CertificateValidationContext",
+                                    "additionalProperties": true,
+                                    "type": "object"
+                                },
+                                "validation_context_sds_secret_config": {
+                                    "$ref": "envoy.api.v2.auth.SdsSecretConfig",
+                                    "additionalProperties": true,
+                                    "type": "object"
+                                }
+                            },
+                            "additionalProperties": true,
+                            "type": "object"
+                        },
+                        "alpn_protocols": {
+                            "items": {
+                                "type": "string"
+                            },
+                            "properties": {},
+                            "type": "array"
+                        }
+                    },
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "require_client_certificate": {
+                    "$ref": "google.protobuf.BoolValue",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "require_sni": {
+                    "$ref": "google.protobuf.BoolValue",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "session_ticket_keys": {
+                    "properties": {
+                        "keys": {
+                            "items": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "$ref": "envoy.api.v2.core.DataSource"
+                            },
+                            "properties": {},
+                            "type": "array"
+                        }
+                    },
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "session_ticket_keys_sds_secret_config": {
+                    "$ref": "envoy.api.v2.auth.SdsSecretConfig",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "disable_stateless_session_resumption": {
+                    "properties": {},
+                    "type": "boolean"
+                },
+                "session_timeout": {
+                    "$ref": "google.protobuf.Duration",
+                    "additionalProperties": true,
+                    "type": "object"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "filters": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "name": {
+                        "properties": {},
+                        "type": "string"
+                    },
+                    "config": {
+                        "$ref": "google.protobuf.Struct",
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "typed_config": {
+                        "$ref": "google.protobuf.Any",
+                        "additionalProperties": true,
+                        "type": "object"
+                    }
+                },
+                "additionalProperties": true,
+                "type": "object"
+            },
+            "properties": {},
+            "type": "array"
+        },
+        "use_proxy_proto": {
+            "$ref": "google.protobuf.BoolValue",
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "metadata": {
+            "properties": {
+                "filter_metadata": {
+                    "properties": {},
+                    "additionalProperties": {
+                        "$ref": "google.protobuf.Struct",
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "type": "object"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "transport_socket": {
+            "properties": {
+                "name": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "config": {
+                    "$ref": "google.protobuf.Struct",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "typed_config": {
+                    "$ref": "google.protobuf.Any",
+                    "additionalProperties": true,
+                    "type": "object"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "name": {
+            "properties": {},
+            "type": "string"
+        }
+    },
+    "additionalProperties": true,
+    "type": "object",
+    "definitions": {
+        "envoy.api.v2.auth.CertificateValidationContext": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "trusted_ca": {
+                    "$ref": "envoy.api.v2.core.DataSource",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "verify_certificate_spki": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "properties": {},
+                    "type": "array"
+                },
+                "verify_certificate_hash": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "properties": {},
+                    "type": "array"
+                },
+                "verify_subject_alt_name": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "properties": {},
+                    "type": "array"
+                },
+                "match_subject_alt_names": {
+                    "items": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "properties": {
+                            "exact": {
+                                "properties": {},
+                                "type": "string"
+                            },
+                            "prefix": {
+                                "properties": {},
+                                "type": "string"
+                            },
+                            "suffix": {
+                                "properties": {},
+                                "type": "string"
+                            },
+                            "regex": {
+                                "properties": {},
+                                "type": "string"
+                            },
+                            "safe_regex": {
+                                "properties": {
+                                    "google_re2": {
+                                        "properties": {
+                                            "max_program_size": {
+                                                "$ref": "google.protobuf.UInt32Value",
+                                                "additionalProperties": true,
+                                                "type": "object"
+                                            }
+                                        },
+                                        "additionalProperties": true,
+                                        "type": "object"
+                                    },
+                                    "regex": {
+                                        "properties": {},
+                                        "type": "string"
+                                    }
+                                },
+                                "additionalProperties": true,
+                                "type": "object"
+                            },
+                            "ignore_case": {
+                                "properties": {},
+                                "type": "boolean"
+                            }
+                        },
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "properties": {},
+                    "type": "array"
+                },
+                "require_ocsp_staple": {
+                    "$ref": "google.protobuf.BoolValue",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "require_signed_certificate_timestamp": {
+                    "$ref": "google.protobuf.BoolValue",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "crl": {
+                    "$ref": "envoy.api.v2.core.DataSource",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "allow_expired_certificate": {
+                    "properties": {},
+                    "type": "boolean"
+                },
+                "trust_chain_verification": {
+                    "properties": {},
+                    "enum": [
+                        "VERIFY_TRUST_CHAIN",
+                        0,
+                        "ACCEPT_UNTRUSTED",
+                        1
+                    ],
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "integer"
+                        }
+                    ]
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "envoy.api.v2.auth.CertificateValidationContext"
+        },
+        "envoy.api.v2.auth.SdsSecretConfig": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "name": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "sds_config": {
+                    "properties": {
+                        "path": {
+                            "properties": {},
+                            "type": "string"
+                        },
+                        "api_config_source": {
+                            "properties": {
+                                "api_type": {
+                                    "properties": {},
+                                    "enum": [
+                                        "UNSUPPORTED_REST_LEGACY",
+                                        0,
+                                        "REST",
+                                        1,
+                                        "GRPC",
+                                        2,
+                                        "DELTA_GRPC",
+                                        3
+                                    ],
+                                    "oneOf": [
+                                        {
+                                            "type": "string"
+                                        },
+                                        {
+                                            "type": "integer"
+                                        }
+                                    ]
+                                },
+                                "transport_api_version": {
+                                    "properties": {},
+                                    "oneOf": [
+                                        {
+                                            "type": "string"
+                                        },
+                                        {
+                                            "type": "integer"
+                                        }
+                                    ]
+                                },
+                                "cluster_names": {
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "properties": {},
+                                    "type": "array"
+                                },
+                                "grpc_services": {
+                                    "items": {
+                                        "$schema": "http://json-schema.org/draft-04/schema#",
+                                        "properties": {
+                                            "envoy_grpc": {
+                                                "properties": {
+                                                    "cluster_name": {
+                                                        "properties": {},
+                                                        "type": "string"
+                                                    }
+                                                },
+                                                "additionalProperties": true,
+                                                "type": "object"
+                                            },
+                                            "google_grpc": {
+                                                "properties": {
+                                                    "target_uri": {
+                                                        "properties": {},
+                                                        "type": "string"
+                                                    },
+                                                    "channel_credentials": {
+                                                        "properties": {
+                                                            "ssl_credentials": {
+                                                                "properties": {
+                                                                    "root_certs": {
+                                                                        "$ref": "envoy.api.v2.core.DataSource",
+                                                                        "additionalProperties": true,
+                                                                        "type": "object"
+                                                                    },
+                                                                    "private_key": {
+                                                                        "$ref": "envoy.api.v2.core.DataSource",
+                                                                        "additionalProperties": true,
+                                                                        "type": "object"
+                                                                    },
+                                                                    "cert_chain": {
+                                                                        "$ref": "envoy.api.v2.core.DataSource",
+                                                                        "additionalProperties": true,
+                                                                        "type": "object"
+                                                                    }
+                                                                },
+                                                                "additionalProperties": true,
+                                                                "type": "object"
+                                                            },
+                                                            "google_default": {
+                                                                "$ref": "google.protobuf.Empty",
+                                                                "additionalProperties": true,
+                                                                "type": "object"
+                                                            },
+                                                            "local_credentials": {
+                                                                "properties": {},
+                                                                "additionalProperties": true,
+                                                                "type": "object"
+                                                            }
+                                                        },
+                                                        "additionalProperties": true,
+                                                        "type": "object"
+                                                    },
+                                                    "call_credentials": {
+                                                        "items": {
+                                                            "$schema": "http://json-schema.org/draft-04/schema#",
+                                                            "properties": {
+                                                                "access_token": {
+                                                                    "properties": {},
+                                                                    "type": "string"
+                                                                },
+                                                                "google_compute_engine": {
+                                                                    "$ref": "google.protobuf.Empty",
+                                                                    "additionalProperties": true,
+                                                                    "type": "object"
+                                                                },
+                                                                "google_refresh_token": {
+                                                                    "properties": {},
+                                                                    "type": "string"
+                                                                },
+                                                                "service_account_jwt_access": {
+                                                                    "properties": {
+                                                                        "json_key": {
+                                                                            "properties": {},
+                                                                            "type": "string"
+                                                                        },
+                                                                        "token_lifetime_seconds": {
+                                                                            "properties": {},
+                                                                            "oneOf": [
+                                                                                {
+                                                                                    "type": "integer"
+                                                                                },
+                                                                                {
+                                                                                    "type": "string"
+                                                                                }
+                                                                            ]
+                                                                        }
+                                                                    },
+                                                                    "additionalProperties": true,
+                                                                    "type": "object"
+                                                                },
+                                                                "google_iam": {
+                                                                    "properties": {
+                                                                        "authorization_token": {
+                                                                            "properties": {},
+                                                                            "type": "string"
+                                                                        },
+                                                                        "authority_selector": {
+                                                                            "properties": {},
+                                                                            "type": "string"
+                                                                        }
+                                                                    },
+                                                                    "additionalProperties": true,
+                                                                    "type": "object"
+                                                                },
+                                                                "from_plugin": {
+                                                                    "properties": {
+                                                                        "name": {
+                                                                            "properties": {},
+                                                                            "type": "string"
+                                                                        },
+                                                                        "config": {
+                                                                            "$ref": "google.protobuf.Struct",
+                                                                            "additionalProperties": true,
+                                                                            "type": "object"
+                                                                        },
+                                                                        "typed_config": {
+                                                                            "$ref": "google.protobuf.Any",
+                                                                            "additionalProperties": true,
+                                                                            "type": "object"
+                                                                        }
+                                                                    },
+                                                                    "additionalProperties": true,
+                                                                    "type": "object"
+                                                                },
+                                                                "sts_service": {
+                                                                    "properties": {
+                                                                        "token_exchange_service_uri": {
+                                                                            "properties": {},
+                                                                            "type": "string"
+                                                                        },
+                                                                        "resource": {
+                                                                            "properties": {},
+                                                                            "type": "string"
+                                                                        },
+                                                                        "audience": {
+                                                                            "properties": {},
+                                                                            "type": "string"
+                                                                        },
+                                                                        "scope": {
+                                                                            "properties": {},
+                                                                            "type": "string"
+                                                                        },
+                                                                        "requested_token_type": {
+                                                                            "properties": {},
+                                                                            "type": "string"
+                                                                        },
+                                                                        "subject_token_path": {
+                                                                            "properties": {},
+                                                                            "type": "string"
+                                                                        },
+                                                                        "subject_token_type": {
+                                                                            "properties": {},
+                                                                            "type": "string"
+                                                                        },
+                                                                        "actor_token_path": {
+                                                                            "properties": {},
+                                                                            "type": "string"
+                                                                        },
+                                                                        "actor_token_type": {
+                                                                            "properties": {},
+                                                                            "type": "string"
+                                                                        }
+                                                                    },
+                                                                    "additionalProperties": true,
+                                                                    "type": "object"
+                                                                }
+                                                            },
+                                                            "additionalProperties": true,
+                                                            "type": "object"
+                                                        },
+                                                        "properties": {},
+                                                        "type": "array"
+                                                    },
+                                                    "stat_prefix": {
+                                                        "properties": {},
+                                                        "type": "string"
+                                                    },
+                                                    "credentials_factory_name": {
+                                                        "properties": {},
+                                                        "type": "string"
+                                                    },
+                                                    "config": {
+                                                        "$ref": "google.protobuf.Struct",
+                                                        "additionalProperties": true,
+                                                        "type": "object"
+                                                    }
+                                                },
+                                                "additionalProperties": true,
+                                                "type": "object"
+                                            },
+                                            "timeout": {
+                                                "$ref": "google.protobuf.Duration",
+                                                "additionalProperties": true,
+                                                "type": "object"
+                                            },
+                                            "initial_metadata": {
+                                                "items": {
+                                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                                    "properties": {
+                                                        "key": {
+                                                            "properties": {},
+                                                            "type": "string"
+                                                        },
+                                                        "value": {
+                                                            "properties": {},
+                                                            "type": "string"
+                                                        }
+                                                    },
+                                                    "additionalProperties": true,
+                                                    "type": "object"
+                                                },
+                                                "properties": {},
+                                                "type": "array"
+                                            }
+                                        },
+                                        "additionalProperties": true,
+                                        "type": "object"
+                                    },
+                                    "properties": {},
+                                    "type": "array"
+                                },
+                                "refresh_delay": {
+                                    "$ref": "google.protobuf.Duration",
+                                    "additionalProperties": true,
+                                    "type": "object"
+                                },
+                                "request_timeout": {
+                                    "$ref": "google.protobuf.Duration",
+                                    "additionalProperties": true,
+                                    "type": "object"
+                                },
+                                "rate_limit_settings": {
+                                    "properties": {
+                                        "max_tokens": {
+                                            "$ref": "google.protobuf.UInt32Value",
+                                            "additionalProperties": true,
+                                            "type": "object"
+                                        },
+                                        "fill_rate": {
+                                            "properties": {
+                                                "value": {
+                                                    "properties": {},
+                                                    "type": "number"
+                                                }
+                                            },
+                                            "additionalProperties": true,
+                                            "type": "object"
+                                        }
+                                    },
+                                    "additionalProperties": true,
+                                    "type": "object"
+                                },
+                                "set_node_on_first_message_only": {
+                                    "properties": {},
+                                    "type": "boolean"
+                                }
+                            },
+                            "additionalProperties": true,
+                            "type": "object"
+                        },
+                        "ads": {
+                            "properties": {},
+                            "additionalProperties": true,
+                            "type": "object"
+                        },
+                        "self": {
+                            "properties": {},
+                            "additionalProperties": true,
+                            "type": "object"
+                        },
+                        "initial_fetch_timeout": {
+                            "$ref": "google.protobuf.Duration",
+                            "additionalProperties": true,
+                            "type": "object"
+                        },
+                        "resource_api_version": {
+                            "properties": {},
+                            "oneOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "integer"
+                                }
+                            ]
+                        }
+                    },
+                    "additionalProperties": true,
+                    "type": "object"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "envoy.api.v2.auth.SdsSecretConfig"
+        },
+        "envoy.api.v2.core.CidrRange": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "address_prefix": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "prefix_len": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "envoy.api.v2.core.CidrRange"
+        },
+        "envoy.api.v2.core.DataSource": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "filename": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "inline_bytes": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "inline_string": {
+                    "properties": {},
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "envoy.api.v2.core.DataSource"
+        },
+        "google.protobuf.Any": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "type_url": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "value": {
+                    "properties": {},
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "google.protobuf.Any"
+        },
+        "google.protobuf.BoolValue": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "value": {
+                    "properties": {},
+                    "type": "boolean"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "google.protobuf.BoolValue"
+        },
+        "google.protobuf.Duration": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "seconds": {
+                    "properties": {},
+                    "oneOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
+                },
+                "nanos": {
+                    "properties": {},
+                    "type": "integer"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "google.protobuf.Duration"
+        },
+        "google.protobuf.Empty": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {},
+            "additionalProperties": true,
+            "type": "object",
+            "id": "google.protobuf.Empty"
+        },
+        "google.protobuf.Struct": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "fields": {
+                    "properties": {},
+                    "additionalProperties": {
+                        "$ref": "google.protobuf.Value",
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "type": "object"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "google.protobuf.Struct"
+        },
+        "google.protobuf.UInt32Value": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "value": {
+                    "properties": {},
+                    "type": "integer"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "google.protobuf.UInt32Value"
+        },
+        "google.protobuf.Value": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "null_value": {
+                    "properties": {},
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "integer"
+                        }
+                    ]
+                },
+                "number_value": {
+                    "properties": {},
+                    "type": "number"
+                },
+                "string_value": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "bool_value": {
+                    "properties": {},
+                    "type": "boolean"
+                },
+                "struct_value": {
+                    "$ref": "google.protobuf.Struct",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "list_value": {
+                    "properties": {
+                        "values": {
+                            "items": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "$ref": "google.protobuf.Value"
+                            },
+                            "properties": {},
+                            "type": "array"
+                        }
+                    },
+                    "additionalProperties": true,
+                    "type": "object"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "google.protobuf.Value"
+        }
+    }
+}

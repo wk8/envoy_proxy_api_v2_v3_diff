@@ -1,0 +1,63 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "$ref": "ListenerFilterChainMatchPredicate",
+    "definitions": {
+        "ListenerFilterChainMatchPredicate": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "or_match": {
+                    "$ref": "envoy.api.v2.listener.ListenerFilterChainMatchPredicate.MatchSet",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "and_match": {
+                    "$ref": "envoy.api.v2.listener.ListenerFilterChainMatchPredicate.MatchSet",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "not_match": {
+                    "$ref": "ListenerFilterChainMatchPredicate",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "any_match": {
+                    "properties": {},
+                    "type": "boolean"
+                },
+                "destination_port_range": {
+                    "properties": {
+                        "start": {
+                            "properties": {},
+                            "type": "integer"
+                        },
+                        "end": {
+                            "properties": {},
+                            "type": "integer"
+                        }
+                    },
+                    "additionalProperties": true,
+                    "type": "object"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "ListenerFilterChainMatchPredicate"
+        },
+        "envoy.api.v2.listener.ListenerFilterChainMatchPredicate.MatchSet": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "rules": {
+                    "items": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "$ref": "ListenerFilterChainMatchPredicate"
+                    },
+                    "properties": {},
+                    "type": "array"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "envoy.api.v2.listener.ListenerFilterChainMatchPredicate.MatchSet"
+        }
+    }
+}

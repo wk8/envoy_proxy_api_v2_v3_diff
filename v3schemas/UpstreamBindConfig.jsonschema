@@ -3,279 +3,68 @@
     "properties": {
         "source_address": {
             "properties": {
-                "pipe": {
-                    "properties": {
-                        "address": {
-                            "enum": [
-                                "TCP",
-                                0,
-                                "UDP",
-                                1
-                            ],
-                            "oneOf": [
-                                {
-                                    "type": "string"
-                                },
-                                {
-                                    "type": "integer"
-                                },
-                                {
-                                    "type": "null"
-                                }
-                            ]
-                        },
-                        "ipv4_compat": {
-                            "enum": [
-                                "TCP",
-                                0,
-                                "UDP",
-                                1
-                            ],
-                            "oneOf": [
-                                {
-                                    "type": "string"
-                                },
-                                {
-                                    "type": "integer"
-                                },
-                                {
-                                    "type": "null"
-                                }
-                            ]
-                        },
-                        "named_port": {
-                            "enum": [
-                                "TCP",
-                                0,
-                                "UDP",
-                                1
-                            ],
-                            "oneOf": [
-                                {
-                                    "type": "string"
-                                },
-                                {
-                                    "type": "integer"
-                                },
-                                {
-                                    "type": "null"
-                                }
-                            ]
-                        },
-                        "port_value": {
-                            "enum": [
-                                "TCP",
-                                0,
-                                "UDP",
-                                1
-                            ],
-                            "oneOf": [
-                                {
-                                    "type": "string"
-                                },
-                                {
-                                    "type": "integer"
-                                },
-                                {
-                                    "type": "null"
-                                }
-                            ]
-                        },
-                        "protocol": {
-                            "enum": [
-                                "TCP",
-                                0,
-                                "UDP",
-                                1
-                            ],
-                            "oneOf": [
-                                {
-                                    "type": "string"
-                                },
-                                {
-                                    "type": "integer"
-                                },
-                                {
-                                    "type": "null"
-                                }
-                            ]
-                        },
-                        "resolver_name": {
-                            "enum": [
-                                "TCP",
-                                0,
-                                "UDP",
-                                1
-                            ],
-                            "oneOf": [
-                                {
-                                    "type": "string"
-                                },
-                                {
-                                    "type": "integer"
-                                },
-                                {
-                                    "type": "null"
-                                }
-                            ]
-                        }
-                    },
-                    "additionalProperties": true,
-                    "oneOf": [
-                        {
-                            "type": "null"
-                        },
-                        {
-                            "type": "object"
-                        }
-                    ]
-                },
                 "socket_address": {
                     "properties": {
+                        "protocol": {
+                            "properties": {},
+                            "enum": [
+                                "TCP",
+                                0,
+                                "UDP",
+                                1
+                            ],
+                            "oneOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "integer"
+                                }
+                            ]
+                        },
                         "address": {
-                            "enum": [
-                                "TCP",
-                                0,
-                                "UDP",
-                                1
-                            ],
-                            "oneOf": [
-                                {
-                                    "type": "string"
-                                },
-                                {
-                                    "type": "integer"
-                                },
-                                {
-                                    "type": "null"
-                                }
-                            ]
-                        },
-                        "ipv4_compat": {
-                            "enum": [
-                                "TCP",
-                                0,
-                                "UDP",
-                                1
-                            ],
-                            "oneOf": [
-                                {
-                                    "type": "string"
-                                },
-                                {
-                                    "type": "integer"
-                                },
-                                {
-                                    "type": "null"
-                                }
-                            ]
-                        },
-                        "named_port": {
-                            "enum": [
-                                "TCP",
-                                0,
-                                "UDP",
-                                1
-                            ],
-                            "oneOf": [
-                                {
-                                    "type": "string"
-                                },
-                                {
-                                    "type": "integer"
-                                },
-                                {
-                                    "type": "null"
-                                }
-                            ]
+                            "properties": {},
+                            "type": "string"
                         },
                         "port_value": {
-                            "enum": [
-                                "TCP",
-                                0,
-                                "UDP",
-                                1
-                            ],
-                            "oneOf": [
-                                {
-                                    "type": "string"
-                                },
-                                {
-                                    "type": "integer"
-                                },
-                                {
-                                    "type": "null"
-                                }
-                            ]
+                            "properties": {},
+                            "type": "integer"
                         },
-                        "protocol": {
-                            "enum": [
-                                "TCP",
-                                0,
-                                "UDP",
-                                1
-                            ],
-                            "oneOf": [
-                                {
-                                    "type": "string"
-                                },
-                                {
-                                    "type": "integer"
-                                },
-                                {
-                                    "type": "null"
-                                }
-                            ]
+                        "named_port": {
+                            "properties": {},
+                            "type": "string"
                         },
                         "resolver_name": {
-                            "enum": [
-                                "TCP",
-                                0,
-                                "UDP",
-                                1
-                            ],
-                            "oneOf": [
-                                {
-                                    "type": "string"
-                                },
-                                {
-                                    "type": "integer"
-                                },
-                                {
-                                    "type": "null"
-                                }
-                            ]
+                            "properties": {},
+                            "type": "string"
+                        },
+                        "ipv4_compat": {
+                            "properties": {},
+                            "type": "boolean"
                         }
                     },
                     "additionalProperties": true,
-                    "oneOf": [
-                        {
-                            "type": "null"
+                    "type": "object"
+                },
+                "pipe": {
+                    "properties": {
+                        "path": {
+                            "properties": {},
+                            "type": "string"
                         },
-                        {
-                            "type": "object"
+                        "mode": {
+                            "properties": {},
+                            "type": "integer"
                         }
-                    ]
+                    },
+                    "additionalProperties": true,
+                    "type": "object"
                 }
             },
             "additionalProperties": true,
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "object"
-                }
-            ]
+            "type": "object"
         }
     },
     "additionalProperties": true,
-    "oneOf": [
-        {
-            "type": "null"
-        },
-        {
-            "type": "object"
-        }
-    ]
+    "type": "object"
 }

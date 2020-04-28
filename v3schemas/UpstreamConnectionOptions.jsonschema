@@ -3,94 +3,40 @@
     "properties": {
         "tcp_keepalive": {
             "properties": {
-                "keepalive_interval": {
-                    "properties": {
-                        "value": {
-                            "oneOf": [
-                                {
-                                    "type": "null"
-                                },
-                                {
-                                    "type": "integer"
-                                }
-                            ]
-                        }
-                    },
-                    "additionalProperties": true,
-                    "oneOf": [
-                        {
-                            "type": "null"
-                        },
-                        {
-                            "type": "object"
-                        }
-                    ]
-                },
                 "keepalive_probes": {
-                    "properties": {
-                        "value": {
-                            "oneOf": [
-                                {
-                                    "type": "null"
-                                },
-                                {
-                                    "type": "integer"
-                                }
-                            ]
-                        }
-                    },
+                    "$ref": "google.protobuf.UInt32Value",
                     "additionalProperties": true,
-                    "oneOf": [
-                        {
-                            "type": "null"
-                        },
-                        {
-                            "type": "object"
-                        }
-                    ]
+                    "type": "object"
                 },
                 "keepalive_time": {
-                    "properties": {
-                        "value": {
-                            "oneOf": [
-                                {
-                                    "type": "null"
-                                },
-                                {
-                                    "type": "integer"
-                                }
-                            ]
-                        }
-                    },
+                    "$ref": "google.protobuf.UInt32Value",
                     "additionalProperties": true,
-                    "oneOf": [
-                        {
-                            "type": "null"
-                        },
-                        {
-                            "type": "object"
-                        }
-                    ]
+                    "type": "object"
+                },
+                "keepalive_interval": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
                 }
             },
             "additionalProperties": true,
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "object"
-                }
-            ]
+            "type": "object"
         }
     },
     "additionalProperties": true,
-    "oneOf": [
-        {
-            "type": "null"
-        },
-        {
-            "type": "object"
+    "type": "object",
+    "definitions": {
+        "google.protobuf.UInt32Value": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "value": {
+                    "properties": {},
+                    "type": "integer"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "google.protobuf.UInt32Value"
         }
-    ]
+    }
 }

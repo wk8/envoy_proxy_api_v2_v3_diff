@@ -1,2444 +1,2464 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "properties": {
+        "transport_socket_matches": {
+            "items": {
+                "$schema": "http://json-schema.org/draft-04/schema#",
+                "properties": {
+                    "name": {
+                        "properties": {},
+                        "type": "string"
+                    },
+                    "match": {
+                        "$ref": "google.protobuf.Struct",
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "transport_socket": {
+                        "$ref": "envoy.api.v2.core.TransportSocket",
+                        "additionalProperties": true,
+                        "type": "object"
+                    }
+                },
+                "additionalProperties": true,
+                "type": "object"
+            },
+            "properties": {},
+            "type": "array"
+        },
+        "name": {
+            "properties": {},
+            "type": "string"
+        },
         "alt_stat_name": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
+            "properties": {},
+            "type": "string"
         },
-        "circuit_breakers": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
+        "type": {
+            "properties": {},
+            "enum": [
+                "STATIC",
+                0,
+                "STRICT_DNS",
+                1,
+                "LOGICAL_DNS",
+                2,
+                "EDS",
+                3,
+                "ORIGINAL_DST",
+                4
+            ],
             "oneOf": [
                 {
-                    "type": "null"
+                    "type": "string"
                 },
                 {
-                    "type": "array"
-                }
-            ]
-        },
-        "cleanup_interval": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
-        },
-        "close_connections_on_host_health_failure": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
+                    "type": "integer"
                 }
             ]
         },
         "cluster_type": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
+            "properties": {
+                "name": {
+                    "properties": {},
+                    "type": "string"
                 },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
+                "typed_config": {
+                    "$ref": "google.protobuf.Any",
+                    "additionalProperties": true,
+                    "type": "object"
                 }
-            ]
-        },
-        "common_http_protocol_options": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
             },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
-        },
-        "common_lb_config": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
-        },
-        "connect_timeout": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
-        },
-        "dns_failure_refresh_rate": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
-        },
-        "dns_lookup_family": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
-        },
-        "dns_refresh_rate": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
-        },
-        "dns_resolvers": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
-        },
-        "drain_connections_on_host_removal": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
+            "additionalProperties": true,
+            "type": "object"
         },
         "eds_cluster_config": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
+            "properties": {
+                "eds_config": {
+                    "$ref": "envoy.api.v2.core.ConfigSource",
+                    "additionalProperties": true,
+                    "type": "object"
                 },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
+                "service_name": {
+                    "properties": {},
+                    "type": "string"
                 }
-            ]
-        },
-        "extension_protocol_options": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
             },
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "connect_timeout": {
+            "$ref": "google.protobuf.Duration",
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "per_connection_buffer_limit_bytes": {
+            "$ref": "google.protobuf.UInt32Value",
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "lb_policy": {
+            "properties": {},
+            "enum": [
+                "ROUND_ROBIN",
+                0,
+                "LEAST_REQUEST",
+                1,
+                "RING_HASH",
+                2,
+                "RANDOM",
+                3,
+                "ORIGINAL_DST_LB",
+                4,
+                "MAGLEV",
+                5,
+                "CLUSTER_PROVIDED",
+                6,
+                "LOAD_BALANCING_POLICY_CONFIG",
+                7
+            ],
             "oneOf": [
                 {
-                    "type": "null"
+                    "type": "string"
                 },
                 {
-                    "type": "array"
-                }
-            ]
-        },
-        "filters": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
-        },
-        "health_checks": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
+                    "type": "integer"
                 }
             ]
         },
         "hosts": {
             "items": {
                 "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
+                "$ref": "envoy.api.v2.core.Address"
             },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
-        },
-        "http2_protocol_options": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
-        },
-        "http_protocol_options": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
-        },
-        "lb_policy": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
-        },
-        "lb_subset_config": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
-        },
-        "least_request_lb_config": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
+            "properties": {},
+            "type": "array"
         },
         "load_assignment": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
+            "properties": {
+                "cluster_name": {
+                    "properties": {},
+                    "type": "string"
                 },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
+                "endpoints": {
+                    "items": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "properties": {
+                            "locality": {
+                                "properties": {
+                                    "region": {
+                                        "properties": {},
+                                        "type": "string"
+                                    },
+                                    "zone": {
+                                        "properties": {},
+                                        "type": "string"
+                                    },
+                                    "sub_zone": {
+                                        "properties": {},
+                                        "type": "string"
+                                    }
+                                },
+                                "additionalProperties": true,
+                                "type": "object"
+                            },
+                            "lb_endpoints": {
+                                "items": {
+                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                    "properties": {
+                                        "endpoint": {
+                                            "$ref": "envoy.api.v2.endpoint.Endpoint",
+                                            "additionalProperties": true,
+                                            "type": "object"
+                                        },
+                                        "endpoint_name": {
+                                            "properties": {},
+                                            "type": "string"
+                                        },
+                                        "health_status": {
+                                            "properties": {},
+                                            "oneOf": [
+                                                {
+                                                    "type": "string"
+                                                },
+                                                {
+                                                    "type": "integer"
+                                                }
+                                            ]
+                                        },
+                                        "metadata": {
+                                            "$ref": "envoy.api.v2.core.Metadata",
+                                            "additionalProperties": true,
+                                            "type": "object"
+                                        },
+                                        "load_balancing_weight": {
+                                            "$ref": "google.protobuf.UInt32Value",
+                                            "additionalProperties": true,
+                                            "type": "object"
+                                        }
+                                    },
+                                    "additionalProperties": true,
+                                    "type": "object"
+                                },
+                                "properties": {},
+                                "type": "array"
+                            },
+                            "load_balancing_weight": {
+                                "$ref": "google.protobuf.UInt32Value",
+                                "additionalProperties": true,
+                                "type": "object"
+                            },
+                            "priority": {
+                                "properties": {},
+                                "type": "integer"
+                            },
+                            "proximity": {
+                                "$ref": "google.protobuf.UInt32Value",
+                                "additionalProperties": true,
+                                "type": "object"
+                            }
+                        },
+                        "additionalProperties": true,
                         "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
+                    },
+                    "properties": {},
                     "type": "array"
+                },
+                "named_endpoints": {
+                    "properties": {},
+                    "additionalProperties": {
+                        "$ref": "envoy.api.v2.endpoint.Endpoint",
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "type": "object"
+                },
+                "policy": {
+                    "properties": {
+                        "drop_overloads": {
+                            "items": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "properties": {
+                                    "category": {
+                                        "properties": {},
+                                        "type": "string"
+                                    },
+                                    "drop_percentage": {
+                                        "properties": {
+                                            "numerator": {
+                                                "properties": {},
+                                                "type": "integer"
+                                            },
+                                            "denominator": {
+                                                "properties": {},
+                                                "enum": [
+                                                    "HUNDRED",
+                                                    0,
+                                                    "TEN_THOUSAND",
+                                                    1,
+                                                    "MILLION",
+                                                    2
+                                                ],
+                                                "oneOf": [
+                                                    {
+                                                        "type": "string"
+                                                    },
+                                                    {
+                                                        "type": "integer"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        "additionalProperties": true,
+                                        "type": "object"
+                                    }
+                                },
+                                "additionalProperties": true,
+                                "type": "object"
+                            },
+                            "properties": {},
+                            "type": "array"
+                        },
+                        "overprovisioning_factor": {
+                            "$ref": "google.protobuf.UInt32Value",
+                            "additionalProperties": true,
+                            "type": "object"
+                        },
+                        "endpoint_stale_after": {
+                            "$ref": "google.protobuf.Duration",
+                            "additionalProperties": true,
+                            "type": "object"
+                        },
+                        "disable_overprovisioning": {
+                            "properties": {},
+                            "type": "boolean"
+                        }
+                    },
+                    "additionalProperties": true,
+                    "type": "object"
                 }
-            ]
+            },
+            "additionalProperties": true,
+            "type": "object"
         },
-        "load_balancing_policy": {
+        "health_checks": {
             "items": {
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
+                    "timeout": {
+                        "$ref": "google.protobuf.Duration",
+                        "additionalProperties": true,
+                        "type": "object"
                     },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
+                    "interval": {
+                        "$ref": "google.protobuf.Duration",
+                        "additionalProperties": true,
+                        "type": "object"
                     },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
+                    "initial_jitter": {
+                        "$ref": "google.protobuf.Duration",
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "interval_jitter": {
+                        "$ref": "google.protobuf.Duration",
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "interval_jitter_percent": {
+                        "properties": {},
+                        "type": "integer"
+                    },
+                    "unhealthy_threshold": {
+                        "$ref": "google.protobuf.UInt32Value",
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "healthy_threshold": {
+                        "$ref": "google.protobuf.UInt32Value",
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "alt_port": {
+                        "$ref": "google.protobuf.UInt32Value",
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "reuse_connection": {
+                        "$ref": "google.protobuf.BoolValue",
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "http_health_check": {
+                        "properties": {
+                            "host": {
+                                "properties": {},
+                                "type": "string"
                             },
-                            {
+                            "path": {
+                                "properties": {},
+                                "type": "string"
+                            },
+                            "send": {
+                                "$ref": "envoy.api.v2.core.HealthCheck.Payload",
+                                "additionalProperties": true,
+                                "type": "object"
+                            },
+                            "receive": {
+                                "$ref": "envoy.api.v2.core.HealthCheck.Payload",
+                                "additionalProperties": true,
+                                "type": "object"
+                            },
+                            "service_name": {
+                                "properties": {},
+                                "type": "string"
+                            },
+                            "request_headers_to_add": {
+                                "items": {
+                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                    "properties": {
+                                        "header": {
+                                            "$ref": "envoy.api.v2.core.HeaderValue",
+                                            "additionalProperties": true,
+                                            "type": "object"
+                                        },
+                                        "append": {
+                                            "$ref": "google.protobuf.BoolValue",
+                                            "additionalProperties": true,
+                                            "type": "object"
+                                        }
+                                    },
+                                    "additionalProperties": true,
+                                    "type": "object"
+                                },
+                                "properties": {},
+                                "type": "array"
+                            },
+                            "request_headers_to_remove": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "properties": {},
+                                "type": "array"
+                            },
+                            "use_http2": {
+                                "properties": {},
+                                "type": "boolean"
+                            },
+                            "expected_statuses": {
+                                "items": {
+                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                    "properties": {
+                                        "start": {
+                                            "properties": {},
+                                            "oneOf": [
+                                                {
+                                                    "type": "integer"
+                                                },
+                                                {
+                                                    "type": "string"
+                                                }
+                                            ]
+                                        },
+                                        "end": {
+                                            "properties": {},
+                                            "oneOf": [
+                                                {
+                                                    "type": "integer"
+                                                },
+                                                {
+                                                    "type": "string"
+                                                }
+                                            ]
+                                        }
+                                    },
+                                    "additionalProperties": true,
+                                    "type": "object"
+                                },
+                                "properties": {},
+                                "type": "array"
+                            },
+                            "codec_client_type": {
+                                "properties": {},
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "integer"
+                                    }
+                                ]
+                            },
+                            "service_name_matcher": {
+                                "$ref": "envoy.type.matcher.StringMatcher",
+                                "additionalProperties": true,
+                                "type": "object"
+                            }
+                        },
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "tcp_health_check": {
+                        "properties": {
+                            "send": {
+                                "$ref": "envoy.api.v2.core.HealthCheck.Payload",
+                                "additionalProperties": true,
+                                "type": "object"
+                            },
+                            "receive": {
+                                "items": {
+                                    "$schema": "http://json-schema.org/draft-04/schema#",
+                                    "$ref": "envoy.api.v2.core.HealthCheck.Payload"
+                                },
+                                "properties": {},
+                                "type": "array"
+                            }
+                        },
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "grpc_health_check": {
+                        "properties": {
+                            "service_name": {
+                                "properties": {},
+                                "type": "string"
+                            },
+                            "authority": {
+                                "properties": {},
                                 "type": "string"
                             }
-                        ]
+                        },
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "custom_health_check": {
+                        "properties": {
+                            "name": {
+                                "properties": {},
+                                "type": "string"
+                            },
+                            "config": {
+                                "$ref": "google.protobuf.Struct",
+                                "additionalProperties": true,
+                                "type": "object"
+                            },
+                            "typed_config": {
+                                "$ref": "google.protobuf.Any",
+                                "additionalProperties": true,
+                                "type": "object"
+                            }
+                        },
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "no_traffic_interval": {
+                        "$ref": "google.protobuf.Duration",
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "unhealthy_interval": {
+                        "$ref": "google.protobuf.Duration",
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "unhealthy_edge_interval": {
+                        "$ref": "google.protobuf.Duration",
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "healthy_edge_interval": {
+                        "$ref": "google.protobuf.Duration",
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "event_log_path": {
+                        "properties": {},
+                        "type": "string"
+                    },
+                    "event_service": {
+                        "properties": {
+                            "grpc_service": {
+                                "$ref": "envoy.api.v2.core.GrpcService",
+                                "additionalProperties": true,
+                                "type": "object"
+                            }
+                        },
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "always_log_health_check_failures": {
+                        "properties": {},
+                        "type": "boolean"
+                    },
+                    "tls_options": {
+                        "properties": {
+                            "alpn_protocols": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "properties": {},
+                                "type": "array"
+                            }
+                        },
+                        "additionalProperties": true,
+                        "type": "object"
                     }
                 },
                 "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
+                "type": "object"
             },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
-        },
-        "lrs_server": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
+            "properties": {},
+            "type": "array"
         },
         "max_requests_per_connection": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
+            "$ref": "google.protobuf.UInt32Value",
+            "additionalProperties": true,
+            "type": "object"
         },
-        "metadata": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
+        "circuit_breakers": {
+            "properties": {
+                "thresholds": {
+                    "items": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "properties": {
+                            "priority": {
+                                "properties": {},
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "integer"
+                                    }
+                                ]
                             },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
+                            "max_connections": {
+                                "$ref": "google.protobuf.UInt32Value",
+                                "additionalProperties": true,
+                                "type": "object"
                             },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
+                            "max_pending_requests": {
+                                "$ref": "google.protobuf.UInt32Value",
+                                "additionalProperties": true,
+                                "type": "object"
                             },
-                            {
-                                "type": "string"
+                            "max_requests": {
+                                "$ref": "google.protobuf.UInt32Value",
+                                "additionalProperties": true,
+                                "type": "object"
+                            },
+                            "max_retries": {
+                                "$ref": "google.protobuf.UInt32Value",
+                                "additionalProperties": true,
+                                "type": "object"
+                            },
+                            "retry_budget": {
+                                "properties": {
+                                    "budget_percent": {
+                                        "$ref": "envoy.type.Percent",
+                                        "additionalProperties": true,
+                                        "type": "object"
+                                    },
+                                    "min_retry_concurrency": {
+                                        "$ref": "google.protobuf.UInt32Value",
+                                        "additionalProperties": true,
+                                        "type": "object"
+                                    }
+                                },
+                                "additionalProperties": true,
+                                "type": "object"
+                            },
+                            "track_remaining": {
+                                "properties": {},
+                                "type": "boolean"
+                            },
+                            "max_connection_pools": {
+                                "$ref": "google.protobuf.UInt32Value",
+                                "additionalProperties": true,
+                                "type": "object"
                             }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
+                        },
+                        "additionalProperties": true,
                         "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
+                    },
+                    "properties": {},
                     "type": "array"
                 }
-            ]
-        },
-        "name": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
             },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
-        },
-        "original_dst_lb_config": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
-        },
-        "outlier_detection": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
-        },
-        "per_connection_buffer_limit_bytes": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
-        },
-        "protocol_selection": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
-        },
-        "respect_dns_ttl": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
-        },
-        "ring_hash_lb_config": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
+            "additionalProperties": true,
+            "type": "object"
         },
         "tls_context": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
+            "properties": {
+                "common_tls_context": {
+                    "properties": {
+                        "tls_params": {
+                            "properties": {
+                                "tls_minimum_protocol_version": {
+                                    "properties": {},
+                                    "enum": [
+                                        "TLS_AUTO",
+                                        0,
+                                        "TLSv1_0",
+                                        1,
+                                        "TLSv1_1",
+                                        2,
+                                        "TLSv1_2",
+                                        3,
+                                        "TLSv1_3",
+                                        4
+                                    ],
+                                    "oneOf": [
+                                        {
+                                            "type": "string"
+                                        },
+                                        {
+                                            "type": "integer"
+                                        }
+                                    ]
+                                },
+                                "tls_maximum_protocol_version": {
+                                    "properties": {},
+                                    "enum": [
+                                        "TLS_AUTO",
+                                        0,
+                                        "TLSv1_0",
+                                        1,
+                                        "TLSv1_1",
+                                        2,
+                                        "TLSv1_2",
+                                        3,
+                                        "TLSv1_3",
+                                        4
+                                    ],
+                                    "oneOf": [
+                                        {
+                                            "type": "string"
+                                        },
+                                        {
+                                            "type": "integer"
+                                        }
+                                    ]
+                                },
+                                "cipher_suites": {
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "properties": {},
+                                    "type": "array"
+                                },
+                                "ecdh_curves": {
+                                    "items": {
+                                        "type": "string"
+                                    },
+                                    "properties": {},
+                                    "type": "array"
+                                }
                             },
-                            {
+                            "additionalProperties": true,
+                            "type": "object"
+                        },
+                        "tls_certificates": {
+                            "items": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "properties": {
+                                    "certificate_chain": {
+                                        "$ref": "envoy.api.v2.core.DataSource",
+                                        "additionalProperties": true,
+                                        "type": "object"
+                                    },
+                                    "private_key": {
+                                        "$ref": "envoy.api.v2.core.DataSource",
+                                        "additionalProperties": true,
+                                        "type": "object"
+                                    },
+                                    "private_key_provider": {
+                                        "properties": {
+                                            "provider_name": {
+                                                "properties": {},
+                                                "type": "string"
+                                            },
+                                            "config": {
+                                                "$ref": "google.protobuf.Struct",
+                                                "additionalProperties": true,
+                                                "type": "object"
+                                            },
+                                            "typed_config": {
+                                                "$ref": "google.protobuf.Any",
+                                                "additionalProperties": true,
+                                                "type": "object"
+                                            }
+                                        },
+                                        "additionalProperties": true,
+                                        "type": "object"
+                                    },
+                                    "password": {
+                                        "$ref": "envoy.api.v2.core.DataSource",
+                                        "additionalProperties": true,
+                                        "type": "object"
+                                    },
+                                    "ocsp_staple": {
+                                        "$ref": "envoy.api.v2.core.DataSource",
+                                        "additionalProperties": true,
+                                        "type": "object"
+                                    },
+                                    "signed_certificate_timestamp": {
+                                        "items": {
+                                            "$schema": "http://json-schema.org/draft-04/schema#",
+                                            "$ref": "envoy.api.v2.core.DataSource"
+                                        },
+                                        "properties": {},
+                                        "type": "array"
+                                    }
+                                },
+                                "additionalProperties": true,
+                                "type": "object"
+                            },
+                            "properties": {},
+                            "type": "array"
+                        },
+                        "tls_certificate_sds_secret_configs": {
+                            "items": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "$ref": "envoy.api.v2.auth.SdsSecretConfig"
+                            },
+                            "properties": {},
+                            "type": "array"
+                        },
+                        "validation_context": {
+                            "$ref": "envoy.api.v2.auth.CertificateValidationContext",
+                            "additionalProperties": true,
+                            "type": "object"
+                        },
+                        "validation_context_sds_secret_config": {
+                            "$ref": "envoy.api.v2.auth.SdsSecretConfig",
+                            "additionalProperties": true,
+                            "type": "object"
+                        },
+                        "combined_validation_context": {
+                            "properties": {
+                                "default_validation_context": {
+                                    "$ref": "envoy.api.v2.auth.CertificateValidationContext",
+                                    "additionalProperties": true,
+                                    "type": "object"
+                                },
+                                "validation_context_sds_secret_config": {
+                                    "$ref": "envoy.api.v2.auth.SdsSecretConfig",
+                                    "additionalProperties": true,
+                                    "type": "object"
+                                }
+                            },
+                            "additionalProperties": true,
+                            "type": "object"
+                        },
+                        "alpn_protocols": {
+                            "items": {
                                 "type": "string"
-                            }
-                        ]
+                            },
+                            "properties": {},
+                            "type": "array"
+                        }
                     },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
+                    "additionalProperties": true,
+                    "type": "object"
                 },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
+                "sni": {
+                    "properties": {},
+                    "type": "string"
                 },
-                {
-                    "type": "array"
+                "allow_renegotiation": {
+                    "properties": {},
+                    "type": "boolean"
+                },
+                "max_session_keys": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
                 }
-            ]
+            },
+            "additionalProperties": true,
+            "type": "object"
         },
-        "track_timeout_budgets": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
+        "upstream_http_protocol_options": {
+            "properties": {
+                "auto_sni": {
+                    "properties": {},
+                    "type": "boolean"
                 },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
+                "auto_san_validation": {
+                    "properties": {},
+                    "type": "boolean"
                 }
-            ]
+            },
+            "additionalProperties": true,
+            "type": "object"
         },
-        "transport_socket": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
+        "common_http_protocol_options": {
+            "properties": {
+                "idle_timeout": {
+                    "$ref": "google.protobuf.Duration",
+                    "additionalProperties": true,
+                    "type": "object"
                 },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
+                "max_connection_duration": {
+                    "$ref": "google.protobuf.Duration",
+                    "additionalProperties": true,
+                    "type": "object"
                 },
-                {
-                    "type": "array"
+                "max_headers_count": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "max_stream_duration": {
+                    "$ref": "google.protobuf.Duration",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "headers_with_underscores_action": {
+                    "properties": {},
+                    "enum": [
+                        "ALLOW",
+                        0,
+                        "REJECT_REQUEST",
+                        1,
+                        "DROP_HEADER",
+                        2
+                    ],
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "integer"
+                        }
+                    ]
                 }
-            ]
+            },
+            "additionalProperties": true,
+            "type": "object"
         },
-        "transport_socket_matches": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
+        "http_protocol_options": {
+            "properties": {
+                "allow_absolute_url": {
+                    "$ref": "google.protobuf.BoolValue",
+                    "additionalProperties": true,
+                    "type": "object"
                 },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
+                "accept_http_10": {
+                    "properties": {},
+                    "type": "boolean"
                 },
-                {
-                    "type": "array"
+                "default_host_for_http_10": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "header_key_format": {
+                    "properties": {
+                        "proper_case_words": {
+                            "properties": {},
+                            "additionalProperties": true,
+                            "type": "object"
+                        }
+                    },
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "enable_trailers": {
+                    "properties": {},
+                    "type": "boolean"
                 }
-            ]
+            },
+            "additionalProperties": true,
+            "type": "object"
         },
-        "type": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
+        "http2_protocol_options": {
+            "properties": {
+                "hpack_table_size": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
                 },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
+                "max_concurrent_streams": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "initial_stream_window_size": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "initial_connection_window_size": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "allow_connect": {
+                    "properties": {},
+                    "type": "boolean"
+                },
+                "allow_metadata": {
+                    "properties": {},
+                    "type": "boolean"
+                },
+                "max_outbound_frames": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "max_outbound_control_frames": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "max_consecutive_inbound_frames_with_empty_payload": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "max_inbound_priority_frames_per_stream": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "max_inbound_window_update_frames_per_data_frame_sent": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "stream_error_on_invalid_http_messaging": {
+                    "properties": {},
+                    "type": "boolean"
+                },
+                "custom_settings_parameters": {
+                    "items": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "properties": {
+                            "identifier": {
+                                "$ref": "google.protobuf.UInt32Value",
+                                "additionalProperties": true,
+                                "type": "object"
+                            },
+                            "value": {
+                                "$ref": "google.protobuf.UInt32Value",
+                                "additionalProperties": true,
+                                "type": "object"
+                            }
+                        },
+                        "additionalProperties": true,
                         "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
+                    },
+                    "properties": {},
                     "type": "array"
                 }
-            ]
+            },
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "extension_protocol_options": {
+            "properties": {},
+            "additionalProperties": {
+                "$ref": "google.protobuf.Struct",
+                "additionalProperties": true,
+                "type": "object"
+            },
+            "type": "object"
         },
         "typed_extension_protocol_options": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
+            "properties": {},
+            "additionalProperties": {
+                "$ref": "google.protobuf.Any",
                 "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
+                "type": "object"
             },
+            "type": "object"
+        },
+        "dns_refresh_rate": {
+            "$ref": "google.protobuf.Duration",
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "dns_failure_refresh_rate": {
+            "properties": {
+                "base_interval": {
+                    "$ref": "google.protobuf.Duration",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "max_interval": {
+                    "$ref": "google.protobuf.Duration",
+                    "additionalProperties": true,
+                    "type": "object"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "respect_dns_ttl": {
+            "properties": {},
+            "type": "boolean"
+        },
+        "dns_lookup_family": {
+            "properties": {},
+            "enum": [
+                "AUTO",
+                0,
+                "V4_ONLY",
+                1,
+                "V6_ONLY",
+                2
+            ],
             "oneOf": [
                 {
-                    "type": "null"
+                    "type": "string"
                 },
                 {
-                    "type": "array"
+                    "type": "integer"
                 }
             ]
         },
-        "upstream_bind_config": {
+        "dns_resolvers": {
             "items": {
                 "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
+                "$ref": "envoy.api.v2.core.Address"
             },
+            "properties": {},
+            "type": "array"
+        },
+        "use_tcp_for_dns_lookups": {
+            "properties": {},
+            "type": "boolean"
+        },
+        "outlier_detection": {
+            "properties": {
+                "consecutive_5xx": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "interval": {
+                    "$ref": "google.protobuf.Duration",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "base_ejection_time": {
+                    "$ref": "google.protobuf.Duration",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "max_ejection_percent": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "enforcing_consecutive_5xx": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "enforcing_success_rate": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "success_rate_minimum_hosts": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "success_rate_request_volume": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "success_rate_stdev_factor": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "consecutive_gateway_failure": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "enforcing_consecutive_gateway_failure": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "split_external_local_origin_errors": {
+                    "properties": {},
+                    "type": "boolean"
+                },
+                "consecutive_local_origin_failure": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "enforcing_consecutive_local_origin_failure": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "enforcing_local_origin_success_rate": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "failure_percentage_threshold": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "enforcing_failure_percentage": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "enforcing_failure_percentage_local_origin": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "failure_percentage_minimum_hosts": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "failure_percentage_request_volume": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "cleanup_interval": {
+            "$ref": "google.protobuf.Duration",
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "upstream_bind_config": {
+            "properties": {
+                "source_address": {
+                    "$ref": "envoy.api.v2.core.SocketAddress",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "freebind": {
+                    "$ref": "google.protobuf.BoolValue",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "socket_options": {
+                    "items": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "properties": {
+                            "level": {
+                                "properties": {},
+                                "oneOf": [
+                                    {
+                                        "type": "integer"
+                                    },
+                                    {
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            "name": {
+                                "properties": {},
+                                "oneOf": [
+                                    {
+                                        "type": "integer"
+                                    },
+                                    {
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            "int_value": {
+                                "properties": {},
+                                "oneOf": [
+                                    {
+                                        "type": "integer"
+                                    },
+                                    {
+                                        "type": "string"
+                                    }
+                                ]
+                            },
+                            "buf_value": {
+                                "properties": {},
+                                "type": "string"
+                            },
+                            "state": {
+                                "properties": {},
+                                "enum": [
+                                    "STATE_PREBIND",
+                                    0,
+                                    "STATE_BOUND",
+                                    1,
+                                    "STATE_LISTENING",
+                                    2
+                                ],
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "integer"
+                                    }
+                                ]
+                            }
+                        },
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "properties": {},
+                    "type": "array"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "lb_subset_config": {
+            "properties": {
+                "fallback_policy": {
+                    "properties": {},
+                    "enum": [
+                        "NO_FALLBACK",
+                        0,
+                        "ANY_ENDPOINT",
+                        1,
+                        "DEFAULT_SUBSET",
+                        2
+                    ],
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "integer"
+                        }
+                    ]
+                },
+                "default_subset": {
+                    "$ref": "google.protobuf.Struct",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "subset_selectors": {
+                    "items": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "properties": {
+                            "keys": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "properties": {},
+                                "type": "array"
+                            },
+                            "fallback_policy": {
+                                "properties": {},
+                                "enum": [
+                                    "NOT_DEFINED",
+                                    0,
+                                    "NO_FALLBACK",
+                                    1,
+                                    "ANY_ENDPOINT",
+                                    2,
+                                    "DEFAULT_SUBSET",
+                                    3,
+                                    "KEYS_SUBSET",
+                                    4
+                                ],
+                                "oneOf": [
+                                    {
+                                        "type": "string"
+                                    },
+                                    {
+                                        "type": "integer"
+                                    }
+                                ]
+                            },
+                            "fallback_keys_subset": {
+                                "items": {
+                                    "type": "string"
+                                },
+                                "properties": {},
+                                "type": "array"
+                            }
+                        },
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "properties": {},
+                    "type": "array"
+                },
+                "locality_weight_aware": {
+                    "properties": {},
+                    "type": "boolean"
+                },
+                "scale_locality_weight": {
+                    "properties": {},
+                    "type": "boolean"
+                },
+                "panic_mode_any": {
+                    "properties": {},
+                    "type": "boolean"
+                },
+                "list_as_any": {
+                    "properties": {},
+                    "type": "boolean"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "ring_hash_lb_config": {
+            "properties": {
+                "minimum_ring_size": {
+                    "$ref": "google.protobuf.UInt64Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "hash_function": {
+                    "properties": {},
+                    "enum": [
+                        "XX_HASH",
+                        0,
+                        "MURMUR_HASH_2",
+                        1
+                    ],
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "integer"
+                        }
+                    ]
+                },
+                "maximum_ring_size": {
+                    "$ref": "google.protobuf.UInt64Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "original_dst_lb_config": {
+            "properties": {
+                "use_http_header": {
+                    "properties": {},
+                    "type": "boolean"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "least_request_lb_config": {
+            "properties": {
+                "choice_count": {
+                    "$ref": "google.protobuf.UInt32Value",
+                    "additionalProperties": true,
+                    "type": "object"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "common_lb_config": {
+            "properties": {
+                "healthy_panic_threshold": {
+                    "$ref": "envoy.type.Percent",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "zone_aware_lb_config": {
+                    "properties": {
+                        "routing_enabled": {
+                            "$ref": "envoy.type.Percent",
+                            "additionalProperties": true,
+                            "type": "object"
+                        },
+                        "min_cluster_size": {
+                            "$ref": "google.protobuf.UInt64Value",
+                            "additionalProperties": true,
+                            "type": "object"
+                        },
+                        "fail_traffic_on_panic": {
+                            "properties": {},
+                            "type": "boolean"
+                        }
+                    },
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "locality_weighted_lb_config": {
+                    "properties": {},
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "update_merge_window": {
+                    "$ref": "google.protobuf.Duration",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "ignore_new_hosts_until_first_hc": {
+                    "properties": {},
+                    "type": "boolean"
+                },
+                "close_connections_on_host_set_change": {
+                    "properties": {},
+                    "type": "boolean"
+                },
+                "consistent_hashing_lb_config": {
+                    "properties": {
+                        "use_hostname_for_hashing": {
+                            "properties": {},
+                            "type": "boolean"
+                        }
+                    },
+                    "additionalProperties": true,
+                    "type": "object"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "transport_socket": {
+            "$ref": "envoy.api.v2.core.TransportSocket",
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "metadata": {
+            "$ref": "envoy.api.v2.core.Metadata",
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "protocol_selection": {
+            "properties": {},
+            "enum": [
+                "USE_CONFIGURED_PROTOCOL",
+                0,
+                "USE_DOWNSTREAM_PROTOCOL",
+                1
+            ],
             "oneOf": [
                 {
-                    "type": "null"
+                    "type": "string"
                 },
                 {
-                    "type": "array"
+                    "type": "integer"
                 }
             ]
         },
         "upstream_connection_options": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
+            "properties": {
+                "tcp_keepalive": {
+                    "properties": {
+                        "keepalive_probes": {
+                            "$ref": "google.protobuf.UInt32Value",
+                            "additionalProperties": true,
+                            "type": "object"
+                        },
+                        "keepalive_time": {
+                            "$ref": "google.protobuf.UInt32Value",
+                            "additionalProperties": true,
+                            "type": "object"
+                        },
+                        "keepalive_interval": {
+                            "$ref": "google.protobuf.UInt32Value",
+                            "additionalProperties": true,
+                            "type": "object"
+                        }
                     },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
+                    "additionalProperties": true,
+                    "type": "object"
                 }
-            ]
+            },
+            "additionalProperties": true,
+            "type": "object"
         },
-        "upstream_http_protocol_options": {
-            "items": {
-                "$schema": "http://json-schema.org/draft-04/schema#",
-                "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    }
-                },
-                "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
-            },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
+        "close_connections_on_host_health_failure": {
+            "properties": {},
+            "type": "boolean"
         },
-        "use_tcp_for_dns_lookups": {
+        "drain_connections_on_host_removal": {
+            "properties": {},
+            "type": "boolean"
+        },
+        "filters": {
             "items": {
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
-                    "match": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
-                    },
                     "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
+                        "properties": {},
+                        "type": "string"
                     },
-                    "transport_socket": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
+                    "typed_config": {
+                        "$ref": "google.protobuf.Any",
+                        "additionalProperties": true,
+                        "type": "object"
                     }
                 },
                 "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
+                "type": "object"
             },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
+            "properties": {},
+            "type": "array"
+        },
+        "load_balancing_policy": {
+            "properties": {
+                "policies": {
+                    "items": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "properties": {
+                            "name": {
+                                "properties": {},
+                                "type": "string"
+                            },
+                            "config": {
+                                "$ref": "google.protobuf.Struct",
+                                "additionalProperties": true,
+                                "type": "object"
+                            },
+                            "typed_config": {
+                                "$ref": "google.protobuf.Any",
+                                "additionalProperties": true,
+                                "type": "object"
+                            }
+                        },
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "properties": {},
                     "type": "array"
                 }
-            ]
+            },
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "lrs_server": {
+            "$ref": "envoy.api.v2.core.ConfigSource",
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "track_timeout_budgets": {
+            "properties": {},
+            "type": "boolean"
         }
     },
     "additionalProperties": true,
-    "oneOf": [
-        {
-            "type": "null"
+    "type": "object",
+    "definitions": {
+        "envoy.api.v2.auth.CertificateValidationContext": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "trusted_ca": {
+                    "$ref": "envoy.api.v2.core.DataSource",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "verify_certificate_spki": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "properties": {},
+                    "type": "array"
+                },
+                "verify_certificate_hash": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "properties": {},
+                    "type": "array"
+                },
+                "verify_subject_alt_name": {
+                    "items": {
+                        "type": "string"
+                    },
+                    "properties": {},
+                    "type": "array"
+                },
+                "match_subject_alt_names": {
+                    "items": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "$ref": "envoy.type.matcher.StringMatcher"
+                    },
+                    "properties": {},
+                    "type": "array"
+                },
+                "require_ocsp_staple": {
+                    "$ref": "google.protobuf.BoolValue",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "require_signed_certificate_timestamp": {
+                    "$ref": "google.protobuf.BoolValue",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "crl": {
+                    "$ref": "envoy.api.v2.core.DataSource",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "allow_expired_certificate": {
+                    "properties": {},
+                    "type": "boolean"
+                },
+                "trust_chain_verification": {
+                    "properties": {},
+                    "enum": [
+                        "VERIFY_TRUST_CHAIN",
+                        0,
+                        "ACCEPT_UNTRUSTED",
+                        1
+                    ],
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "integer"
+                        }
+                    ]
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "envoy.api.v2.auth.CertificateValidationContext"
         },
-        {
-            "type": "object"
+        "envoy.api.v2.auth.SdsSecretConfig": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "name": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "sds_config": {
+                    "$ref": "envoy.api.v2.core.ConfigSource",
+                    "additionalProperties": true,
+                    "type": "object"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "envoy.api.v2.auth.SdsSecretConfig"
+        },
+        "envoy.api.v2.core.Address": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "socket_address": {
+                    "$ref": "envoy.api.v2.core.SocketAddress",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "pipe": {
+                    "properties": {
+                        "path": {
+                            "properties": {},
+                            "type": "string"
+                        },
+                        "mode": {
+                            "properties": {},
+                            "type": "integer"
+                        }
+                    },
+                    "additionalProperties": true,
+                    "type": "object"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "envoy.api.v2.core.Address"
+        },
+        "envoy.api.v2.core.ConfigSource": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "path": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "api_config_source": {
+                    "properties": {
+                        "api_type": {
+                            "properties": {},
+                            "enum": [
+                                "UNSUPPORTED_REST_LEGACY",
+                                0,
+                                "REST",
+                                1,
+                                "GRPC",
+                                2,
+                                "DELTA_GRPC",
+                                3
+                            ],
+                            "oneOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "integer"
+                                }
+                            ]
+                        },
+                        "transport_api_version": {
+                            "properties": {},
+                            "oneOf": [
+                                {
+                                    "type": "string"
+                                },
+                                {
+                                    "type": "integer"
+                                }
+                            ]
+                        },
+                        "cluster_names": {
+                            "items": {
+                                "type": "string"
+                            },
+                            "properties": {},
+                            "type": "array"
+                        },
+                        "grpc_services": {
+                            "items": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "$ref": "envoy.api.v2.core.GrpcService"
+                            },
+                            "properties": {},
+                            "type": "array"
+                        },
+                        "refresh_delay": {
+                            "$ref": "google.protobuf.Duration",
+                            "additionalProperties": true,
+                            "type": "object"
+                        },
+                        "request_timeout": {
+                            "$ref": "google.protobuf.Duration",
+                            "additionalProperties": true,
+                            "type": "object"
+                        },
+                        "rate_limit_settings": {
+                            "properties": {
+                                "max_tokens": {
+                                    "$ref": "google.protobuf.UInt32Value",
+                                    "additionalProperties": true,
+                                    "type": "object"
+                                },
+                                "fill_rate": {
+                                    "properties": {
+                                        "value": {
+                                            "properties": {},
+                                            "type": "number"
+                                        }
+                                    },
+                                    "additionalProperties": true,
+                                    "type": "object"
+                                }
+                            },
+                            "additionalProperties": true,
+                            "type": "object"
+                        },
+                        "set_node_on_first_message_only": {
+                            "properties": {},
+                            "type": "boolean"
+                        }
+                    },
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "ads": {
+                    "properties": {},
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "self": {
+                    "properties": {},
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "initial_fetch_timeout": {
+                    "$ref": "google.protobuf.Duration",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "resource_api_version": {
+                    "properties": {},
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "integer"
+                        }
+                    ]
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "envoy.api.v2.core.ConfigSource"
+        },
+        "envoy.api.v2.core.DataSource": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "filename": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "inline_bytes": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "inline_string": {
+                    "properties": {},
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "envoy.api.v2.core.DataSource"
+        },
+        "envoy.api.v2.core.GrpcService": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "envoy_grpc": {
+                    "properties": {
+                        "cluster_name": {
+                            "properties": {},
+                            "type": "string"
+                        }
+                    },
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "google_grpc": {
+                    "properties": {
+                        "target_uri": {
+                            "properties": {},
+                            "type": "string"
+                        },
+                        "channel_credentials": {
+                            "properties": {
+                                "ssl_credentials": {
+                                    "properties": {
+                                        "root_certs": {
+                                            "$ref": "envoy.api.v2.core.DataSource",
+                                            "additionalProperties": true,
+                                            "type": "object"
+                                        },
+                                        "private_key": {
+                                            "$ref": "envoy.api.v2.core.DataSource",
+                                            "additionalProperties": true,
+                                            "type": "object"
+                                        },
+                                        "cert_chain": {
+                                            "$ref": "envoy.api.v2.core.DataSource",
+                                            "additionalProperties": true,
+                                            "type": "object"
+                                        }
+                                    },
+                                    "additionalProperties": true,
+                                    "type": "object"
+                                },
+                                "google_default": {
+                                    "$ref": "google.protobuf.Empty",
+                                    "additionalProperties": true,
+                                    "type": "object"
+                                },
+                                "local_credentials": {
+                                    "properties": {},
+                                    "additionalProperties": true,
+                                    "type": "object"
+                                }
+                            },
+                            "additionalProperties": true,
+                            "type": "object"
+                        },
+                        "call_credentials": {
+                            "items": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "properties": {
+                                    "access_token": {
+                                        "properties": {},
+                                        "type": "string"
+                                    },
+                                    "google_compute_engine": {
+                                        "$ref": "google.protobuf.Empty",
+                                        "additionalProperties": true,
+                                        "type": "object"
+                                    },
+                                    "google_refresh_token": {
+                                        "properties": {},
+                                        "type": "string"
+                                    },
+                                    "service_account_jwt_access": {
+                                        "properties": {
+                                            "json_key": {
+                                                "properties": {},
+                                                "type": "string"
+                                            },
+                                            "token_lifetime_seconds": {
+                                                "properties": {},
+                                                "oneOf": [
+                                                    {
+                                                        "type": "integer"
+                                                    },
+                                                    {
+                                                        "type": "string"
+                                                    }
+                                                ]
+                                            }
+                                        },
+                                        "additionalProperties": true,
+                                        "type": "object"
+                                    },
+                                    "google_iam": {
+                                        "properties": {
+                                            "authorization_token": {
+                                                "properties": {},
+                                                "type": "string"
+                                            },
+                                            "authority_selector": {
+                                                "properties": {},
+                                                "type": "string"
+                                            }
+                                        },
+                                        "additionalProperties": true,
+                                        "type": "object"
+                                    },
+                                    "from_plugin": {
+                                        "properties": {
+                                            "name": {
+                                                "properties": {},
+                                                "type": "string"
+                                            },
+                                            "config": {
+                                                "$ref": "google.protobuf.Struct",
+                                                "additionalProperties": true,
+                                                "type": "object"
+                                            },
+                                            "typed_config": {
+                                                "$ref": "google.protobuf.Any",
+                                                "additionalProperties": true,
+                                                "type": "object"
+                                            }
+                                        },
+                                        "additionalProperties": true,
+                                        "type": "object"
+                                    },
+                                    "sts_service": {
+                                        "properties": {
+                                            "token_exchange_service_uri": {
+                                                "properties": {},
+                                                "type": "string"
+                                            },
+                                            "resource": {
+                                                "properties": {},
+                                                "type": "string"
+                                            },
+                                            "audience": {
+                                                "properties": {},
+                                                "type": "string"
+                                            },
+                                            "scope": {
+                                                "properties": {},
+                                                "type": "string"
+                                            },
+                                            "requested_token_type": {
+                                                "properties": {},
+                                                "type": "string"
+                                            },
+                                            "subject_token_path": {
+                                                "properties": {},
+                                                "type": "string"
+                                            },
+                                            "subject_token_type": {
+                                                "properties": {},
+                                                "type": "string"
+                                            },
+                                            "actor_token_path": {
+                                                "properties": {},
+                                                "type": "string"
+                                            },
+                                            "actor_token_type": {
+                                                "properties": {},
+                                                "type": "string"
+                                            }
+                                        },
+                                        "additionalProperties": true,
+                                        "type": "object"
+                                    }
+                                },
+                                "additionalProperties": true,
+                                "type": "object"
+                            },
+                            "properties": {},
+                            "type": "array"
+                        },
+                        "stat_prefix": {
+                            "properties": {},
+                            "type": "string"
+                        },
+                        "credentials_factory_name": {
+                            "properties": {},
+                            "type": "string"
+                        },
+                        "config": {
+                            "$ref": "google.protobuf.Struct",
+                            "additionalProperties": true,
+                            "type": "object"
+                        }
+                    },
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "timeout": {
+                    "$ref": "google.protobuf.Duration",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "initial_metadata": {
+                    "items": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "$ref": "envoy.api.v2.core.HeaderValue"
+                    },
+                    "properties": {},
+                    "type": "array"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "envoy.api.v2.core.GrpcService"
+        },
+        "envoy.api.v2.core.HeaderValue": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "key": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "value": {
+                    "properties": {},
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "envoy.api.v2.core.HeaderValue"
+        },
+        "envoy.api.v2.core.HealthCheck.Payload": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "text": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "binary": {
+                    "properties": {},
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "envoy.api.v2.core.HealthCheck.Payload"
+        },
+        "envoy.api.v2.core.Metadata": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "filter_metadata": {
+                    "properties": {},
+                    "additionalProperties": {
+                        "$ref": "google.protobuf.Struct",
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "type": "object"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "envoy.api.v2.core.Metadata"
+        },
+        "envoy.api.v2.core.SocketAddress": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "protocol": {
+                    "properties": {},
+                    "enum": [
+                        "TCP",
+                        0,
+                        "UDP",
+                        1
+                    ],
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "integer"
+                        }
+                    ]
+                },
+                "address": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "port_value": {
+                    "properties": {},
+                    "type": "integer"
+                },
+                "named_port": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "resolver_name": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "ipv4_compat": {
+                    "properties": {},
+                    "type": "boolean"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "envoy.api.v2.core.SocketAddress"
+        },
+        "envoy.api.v2.core.TransportSocket": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "name": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "config": {
+                    "$ref": "google.protobuf.Struct",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "typed_config": {
+                    "$ref": "google.protobuf.Any",
+                    "additionalProperties": true,
+                    "type": "object"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "envoy.api.v2.core.TransportSocket"
+        },
+        "envoy.api.v2.endpoint.Endpoint": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "address": {
+                    "$ref": "envoy.api.v2.core.Address",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "health_check_config": {
+                    "properties": {
+                        "port_value": {
+                            "properties": {},
+                            "type": "integer"
+                        },
+                        "hostname": {
+                            "properties": {},
+                            "type": "string"
+                        }
+                    },
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "hostname": {
+                    "properties": {},
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "envoy.api.v2.endpoint.Endpoint"
+        },
+        "envoy.type.Percent": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "value": {
+                    "properties": {},
+                    "type": "number"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "envoy.type.Percent"
+        },
+        "envoy.type.matcher.StringMatcher": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "exact": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "prefix": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "suffix": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "regex": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "safe_regex": {
+                    "properties": {
+                        "google_re2": {
+                            "properties": {
+                                "max_program_size": {
+                                    "$ref": "google.protobuf.UInt32Value",
+                                    "additionalProperties": true,
+                                    "type": "object"
+                                }
+                            },
+                            "additionalProperties": true,
+                            "type": "object"
+                        },
+                        "regex": {
+                            "properties": {},
+                            "type": "string"
+                        }
+                    },
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "ignore_case": {
+                    "properties": {},
+                    "type": "boolean"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "envoy.type.matcher.StringMatcher"
+        },
+        "google.protobuf.Any": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "type_url": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "value": {
+                    "properties": {},
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "google.protobuf.Any"
+        },
+        "google.protobuf.BoolValue": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "value": {
+                    "properties": {},
+                    "type": "boolean"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "google.protobuf.BoolValue"
+        },
+        "google.protobuf.Duration": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "seconds": {
+                    "properties": {},
+                    "oneOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
+                },
+                "nanos": {
+                    "properties": {},
+                    "type": "integer"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "google.protobuf.Duration"
+        },
+        "google.protobuf.Empty": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {},
+            "additionalProperties": true,
+            "type": "object",
+            "id": "google.protobuf.Empty"
+        },
+        "google.protobuf.Struct": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "fields": {
+                    "properties": {},
+                    "additionalProperties": {
+                        "$ref": "google.protobuf.Value",
+                        "additionalProperties": true,
+                        "type": "object"
+                    },
+                    "type": "object"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "google.protobuf.Struct"
+        },
+        "google.protobuf.UInt32Value": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "value": {
+                    "properties": {},
+                    "type": "integer"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "google.protobuf.UInt32Value"
+        },
+        "google.protobuf.UInt64Value": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "value": {
+                    "properties": {},
+                    "oneOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "google.protobuf.UInt64Value"
+        },
+        "google.protobuf.Value": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "null_value": {
+                    "properties": {},
+                    "oneOf": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "integer"
+                        }
+                    ]
+                },
+                "number_value": {
+                    "properties": {},
+                    "type": "number"
+                },
+                "string_value": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "bool_value": {
+                    "properties": {},
+                    "type": "boolean"
+                },
+                "struct_value": {
+                    "$ref": "google.protobuf.Struct",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "list_value": {
+                    "properties": {
+                        "values": {
+                            "items": {
+                                "$schema": "http://json-schema.org/draft-04/schema#",
+                                "$ref": "google.protobuf.Value"
+                            },
+                            "properties": {},
+                            "type": "array"
+                        }
+                    },
+                    "additionalProperties": true,
+                    "type": "object"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "google.protobuf.Value"
         }
-    ]
+    }
 }

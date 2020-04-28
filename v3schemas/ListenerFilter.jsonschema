@@ -1,0 +1,89 @@
+{
+    "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {
+        "name": {
+            "properties": {},
+            "type": "string"
+        },
+        "typed_config": {
+            "properties": {
+                "type_url": {
+                    "properties": {},
+                    "type": "string"
+                },
+                "value": {
+                    "properties": {},
+                    "type": "string"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "filter_disabled": {
+            "$ref": "envoy.config.listener.v3.ListenerFilterChainMatchPredicate",
+            "additionalProperties": true,
+            "type": "object"
+        }
+    },
+    "additionalProperties": true,
+    "type": "object",
+    "definitions": {
+        "envoy.config.listener.v3.ListenerFilterChainMatchPredicate": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "or_match": {
+                    "$ref": "envoy.config.listener.v3.ListenerFilterChainMatchPredicate.MatchSet",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "and_match": {
+                    "$ref": "envoy.config.listener.v3.ListenerFilterChainMatchPredicate.MatchSet",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "not_match": {
+                    "$ref": "envoy.config.listener.v3.ListenerFilterChainMatchPredicate",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "any_match": {
+                    "properties": {},
+                    "type": "boolean"
+                },
+                "destination_port_range": {
+                    "properties": {
+                        "start": {
+                            "properties": {},
+                            "type": "integer"
+                        },
+                        "end": {
+                            "properties": {},
+                            "type": "integer"
+                        }
+                    },
+                    "additionalProperties": true,
+                    "type": "object"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "envoy.config.listener.v3.ListenerFilterChainMatchPredicate"
+        },
+        "envoy.config.listener.v3.ListenerFilterChainMatchPredicate.MatchSet": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "rules": {
+                    "items": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "$ref": "envoy.config.listener.v3.ListenerFilterChainMatchPredicate"
+                    },
+                    "properties": {},
+                    "type": "array"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "envoy.config.listener.v3.ListenerFilterChainMatchPredicate.MatchSet"
+        }
+    }
+}

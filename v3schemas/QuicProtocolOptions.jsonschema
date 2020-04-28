@@ -1,83 +1,52 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "properties": {
-        "crypto_handshake_timeout": {
-            "properties": {
-                "value": {
-                    "oneOf": [
-                        {
-                            "type": "null"
-                        },
-                        {
-                            "type": "integer"
-                        }
-                    ]
-                }
-            },
-            "additionalProperties": true,
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "object"
-                }
-            ]
-        },
-        "idle_timeout": {
-            "properties": {
-                "value": {
-                    "oneOf": [
-                        {
-                            "type": "null"
-                        },
-                        {
-                            "type": "integer"
-                        }
-                    ]
-                }
-            },
-            "additionalProperties": true,
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "object"
-                }
-            ]
-        },
         "max_concurrent_streams": {
             "properties": {
                 "value": {
-                    "oneOf": [
-                        {
-                            "type": "null"
-                        },
-                        {
-                            "type": "integer"
-                        }
-                    ]
+                    "properties": {},
+                    "type": "integer"
                 }
             },
             "additionalProperties": true,
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "object"
-                }
-            ]
+            "type": "object"
+        },
+        "idle_timeout": {
+            "$ref": "google.protobuf.Duration",
+            "additionalProperties": true,
+            "type": "object"
+        },
+        "crypto_handshake_timeout": {
+            "$ref": "google.protobuf.Duration",
+            "additionalProperties": true,
+            "type": "object"
         }
     },
     "additionalProperties": true,
-    "oneOf": [
-        {
-            "type": "null"
-        },
-        {
-            "type": "object"
+    "type": "object",
+    "definitions": {
+        "google.protobuf.Duration": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "seconds": {
+                    "properties": {},
+                    "oneOf": [
+                        {
+                            "type": "integer"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ]
+                },
+                "nanos": {
+                    "properties": {},
+                    "type": "integer"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "google.protobuf.Duration"
         }
-    ]
+    }
 }

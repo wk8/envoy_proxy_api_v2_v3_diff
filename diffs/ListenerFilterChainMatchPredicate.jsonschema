@@ -1,0 +1,16 @@
+9c9
+<                     "$ref": "envoy.api.v2.listener.ListenerFilterChainMatchPredicate.MatchSet",
+---
+>                     "$ref": "envoy.config.listener.v3.ListenerFilterChainMatchPredicate.MatchSet",
+14c14
+<                     "$ref": "envoy.api.v2.listener.ListenerFilterChainMatchPredicate.MatchSet",
+---
+>                     "$ref": "envoy.config.listener.v3.ListenerFilterChainMatchPredicate.MatchSet",
+46c46
+<         "envoy.api.v2.listener.ListenerFilterChainMatchPredicate.MatchSet": {
+---
+>         "envoy.config.listener.v3.ListenerFilterChainMatchPredicate.MatchSet": {
+60c60
+<             "id": "envoy.api.v2.listener.ListenerFilterChainMatchPredicate.MatchSet"
+---
+>             "id": "envoy.config.listener.v3.ListenerFilterChainMatchPredicate.MatchSet"

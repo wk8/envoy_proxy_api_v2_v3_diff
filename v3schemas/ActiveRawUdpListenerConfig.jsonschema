@@ -1,12 +1,6 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
+    "properties": {},
     "additionalProperties": true,
-    "oneOf": [
-        {
-            "type": "null"
-        },
-        {
-            "type": "object"
-        }
-    ]
+    "type": "object"
 }

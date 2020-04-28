@@ -1,34 +1,25 @@
 {
     "$schema": "http://json-schema.org/draft-04/schema#",
     "properties": {
-        "typed_config": {
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "string"
-                }
-            ]
-        },
         "udp_listener_name": {
-            "oneOf": [
-                {
-                    "type": "null"
+            "properties": {},
+            "type": "string"
+        },
+        "typed_config": {
+            "properties": {
+                "type_url": {
+                    "properties": {},
+                    "type": "string"
                 },
-                {
+                "value": {
+                    "properties": {},
                     "type": "string"
                 }
-            ]
+            },
+            "additionalProperties": true,
+            "type": "object"
         }
     },
     "additionalProperties": true,
-    "oneOf": [
-        {
-            "type": "null"
-        },
-        {
-            "type": "object"
-        }
-    ]
+    "type": "object"
 }

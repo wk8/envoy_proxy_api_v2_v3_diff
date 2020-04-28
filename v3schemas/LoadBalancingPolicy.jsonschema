@@ -6,53 +6,31 @@
                 "$schema": "http://json-schema.org/draft-04/schema#",
                 "properties": {
                     "name": {
-                        "oneOf": [
-                            {
-                                "type": "null"
-                            },
-                            {
-                                "type": "string"
-                            }
-                        ]
+                        "properties": {},
+                        "type": "string"
                     },
                     "typed_config": {
-                        "oneOf": [
-                            {
-                                "type": "null"
+                        "properties": {
+                            "type_url": {
+                                "properties": {},
+                                "type": "string"
                             },
-                            {
+                            "value": {
+                                "properties": {},
                                 "type": "string"
                             }
-                        ]
+                        },
+                        "additionalProperties": true,
+                        "type": "object"
                     }
                 },
                 "additionalProperties": true,
-                "oneOf": [
-                    {
-                        "type": "null"
-                    },
-                    {
-                        "type": "object"
-                    }
-                ]
+                "type": "object"
             },
-            "oneOf": [
-                {
-                    "type": "null"
-                },
-                {
-                    "type": "array"
-                }
-            ]
+            "properties": {},
+            "type": "array"
         }
     },
     "additionalProperties": true,
-    "oneOf": [
-        {
-            "type": "null"
-        },
-        {
-            "type": "object"
-        }
-    ]
+    "type": "object"
 }

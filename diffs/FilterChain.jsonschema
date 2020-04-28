@@ -1,203 +1,131 @@
-85c85
-<                                     "$ref": "envoy.api.v2.core.CidrRange"
+14c14
+<                         "$ref": "envoy.api.v2.core.CidrRange"
 ---
->                                     "$ref": "envoy.config.core.v3.CidrRange"
-104c104
-<                                     "LOCAL",
+>                         "$ref": "envoy.config.core.v3.CidrRange"
+33c33
+<                         "LOCAL",
 ---
->                                     "SAME_IP_OR_LOOPBACK",
-121c121
-<                                     "$ref": "envoy.api.v2.core.CidrRange"
+>                         "SAME_IP_OR_LOOPBACK",
+50c50
+<                         "$ref": "envoy.api.v2.core.CidrRange"
 ---
->                                     "$ref": "envoy.config.core.v3.CidrRange"
-155,370d154
-<                     "tls_context": {
-<                         "properties": {
-<                             "common_tls_context": {
-<                                 "properties": {
-<                                     "tls_params": {
-<                                         "properties": {
-<                                             "tls_minimum_protocol_version": {
-<                                                 "properties": {},
-<                                                 "enum": [
-<                                                     "TLS_AUTO",
-<                                                     0,
-<                                                     "TLSv1_0",
-<                                                     1,
-<                                                     "TLSv1_1",
-<                                                     2,
-<                                                     "TLSv1_2",
-<                                                     3,
-<                                                     "TLSv1_3",
-<                                                     4
-<                                                 ],
-<                                                 "oneOf": [
-<                                                     {
-<                                                         "type": "string"
-<                                                     },
-<                                                     {
-<                                                         "type": "integer"
-<                                                     }
-<                                                 ]
-<                                             },
-<                                             "tls_maximum_protocol_version": {
-<                                                 "properties": {},
-<                                                 "enum": [
-<                                                     "TLS_AUTO",
-<                                                     0,
-<                                                     "TLSv1_0",
-<                                                     1,
-<                                                     "TLSv1_1",
-<                                                     2,
-<                                                     "TLSv1_2",
-<                                                     3,
-<                                                     "TLSv1_3",
-<                                                     4
-<                                                 ],
-<                                                 "oneOf": [
-<                                                     {
-<                                                         "type": "string"
-<                                                     },
-<                                                     {
-<                                                         "type": "integer"
-<                                                     }
-<                                                 ]
-<                                             },
-<                                             "cipher_suites": {
-<                                                 "items": {
-<                                                     "type": "string"
-<                                                 },
-<                                                 "properties": {},
-<                                                 "type": "array"
-<                                             },
-<                                             "ecdh_curves": {
-<                                                 "items": {
-<                                                     "type": "string"
-<                                                 },
-<                                                 "properties": {},
-<                                                 "type": "array"
-<                                             }
-<                                         },
-<                                         "additionalProperties": true,
-<                                         "type": "object"
-<                                     },
-<                                     "tls_certificates": {
-<                                         "items": {
-<                                             "$schema": "http://json-schema.org/draft-04/schema#",
-<                                             "properties": {
-<                                                 "certificate_chain": {
-<                                                     "$ref": "envoy.api.v2.core.DataSource",
-<                                                     "additionalProperties": true,
-<                                                     "type": "object"
-<                                                 },
-<                                                 "private_key": {
-<                                                     "$ref": "envoy.api.v2.core.DataSource",
-<                                                     "additionalProperties": true,
-<                                                     "type": "object"
-<                                                 },
-<                                                 "private_key_provider": {
-<                                                     "properties": {
-<                                                         "provider_name": {
-<                                                             "properties": {},
-<                                                             "type": "string"
-<                                                         },
-<                                                         "config": {
-<                                                             "$ref": "google.protobuf.Struct",
-<                                                             "additionalProperties": true,
-<                                                             "type": "object"
-<                                                         },
-<                                                         "typed_config": {
-<                                                             "$ref": "google.protobuf.Any",
-<                                                             "additionalProperties": true,
-<                                                             "type": "object"
-<                                                         }
-<                                                     },
-<                                                     "additionalProperties": true,
-<                                                     "type": "object"
-<                                                 },
-<                                                 "password": {
-<                                                     "$ref": "envoy.api.v2.core.DataSource",
-<                                                     "additionalProperties": true,
-<                                                     "type": "object"
-<                                                 },
-<                                                 "ocsp_staple": {
-<                                                     "$ref": "envoy.api.v2.core.DataSource",
-<                                                     "additionalProperties": true,
-<                                                     "type": "object"
-<                                                 },
-<                                                 "signed_certificate_timestamp": {
-<                                                     "items": {
-<                                                         "$schema": "http://json-schema.org/draft-04/schema#",
-<                                                         "$ref": "envoy.api.v2.core.DataSource"
-<                                                     },
-<                                                     "properties": {},
-<                                                     "type": "array"
-<                                                 }
-<                                             },
-<                                             "additionalProperties": true,
-<                                             "type": "object"
-<                                         },
-<                                         "properties": {},
-<                                         "type": "array"
-<                                     },
-<                                     "tls_certificate_sds_secret_configs": {
-<                                         "items": {
-<                                             "$schema": "http://json-schema.org/draft-04/schema#",
-<                                             "$ref": "envoy.api.v2.auth.SdsSecretConfig"
-<                                         },
-<                                         "properties": {},
-<                                         "type": "array"
-<                                     },
-<                                     "validation_context": {
-<                                         "$ref": "envoy.api.v2.auth.CertificateValidationContext",
-<                                         "additionalProperties": true,
-<                                         "type": "object"
-<                                     },
-<                                     "validation_context_sds_secret_config": {
-<                                         "$ref": "envoy.api.v2.auth.SdsSecretConfig",
-<                                         "additionalProperties": true,
-<                                         "type": "object"
-<                                     },
-<                                     "combined_validation_context": {
-<                                         "properties": {
-<                                             "default_validation_context": {
-<                                                 "$ref": "envoy.api.v2.auth.CertificateValidationContext",
-<                                                 "additionalProperties": true,
-<                                                 "type": "object"
-<                                             },
-<                                             "validation_context_sds_secret_config": {
-<                                                 "$ref": "envoy.api.v2.auth.SdsSecretConfig",
-<                                                 "additionalProperties": true,
-<                                                 "type": "object"
-<                                             }
-<                                         },
-<                                         "additionalProperties": true,
-<                                         "type": "object"
-<                                     },
-<                                     "alpn_protocols": {
-<                                         "items": {
+>                         "$ref": "envoy.config.core.v3.CidrRange"
+84,299d83
+<         "tls_context": {
+<             "properties": {
+<                 "common_tls_context": {
+<                     "properties": {
+<                         "tls_params": {
+<                             "properties": {
+<                                 "tls_minimum_protocol_version": {
+<                                     "properties": {},
+<                                     "enum": [
+<                                         "TLS_AUTO",
+<                                         0,
+<                                         "TLSv1_0",
+<                                         1,
+<                                         "TLSv1_1",
+<                                         2,
+<                                         "TLSv1_2",
+<                                         3,
+<                                         "TLSv1_3",
+<                                         4
+<                                     ],
+<                                     "oneOf": [
+<                                         {
 <                                             "type": "string"
 <                                         },
-<                                         "properties": {},
-<                                         "type": "array"
-<                                     }
+<                                         {
+<                                             "type": "integer"
+<                                         }
+<                                     ]
 <                                 },
-<                                 "additionalProperties": true,
-<                                 "type": "object"
+<                                 "tls_maximum_protocol_version": {
+<                                     "properties": {},
+<                                     "enum": [
+<                                         "TLS_AUTO",
+<                                         0,
+<                                         "TLSv1_0",
+<                                         1,
+<                                         "TLSv1_1",
+<                                         2,
+<                                         "TLSv1_2",
+<                                         3,
+<                                         "TLSv1_3",
+<                                         4
+<                                     ],
+<                                     "oneOf": [
+<                                         {
+<                                             "type": "string"
+<                                         },
+<                                         {
+<                                             "type": "integer"
+<                                         }
+<                                     ]
+<                                 },
+<                                 "cipher_suites": {
+<                                     "items": {
+<                                         "type": "string"
+<                                     },
+<                                     "properties": {},
+<                                     "type": "array"
+<                                 },
+<                                 "ecdh_curves": {
+<                                     "items": {
+<                                         "type": "string"
+<                                     },
+<                                     "properties": {},
+<                                     "type": "array"
+<                                 }
 <                             },
-<                             "require_client_certificate": {
-<                                 "$ref": "google.protobuf.BoolValue",
-<                                 "additionalProperties": true,
-<                                 "type": "object"
-<                             },
-<                             "require_sni": {
-<                                 "$ref": "google.protobuf.BoolValue",
-<                                 "additionalProperties": true,
-<                                 "type": "object"
-<                             },
-<                             "session_ticket_keys": {
+<                             "additionalProperties": true,
+<                             "type": "object"
+<                         },
+<                         "tls_certificates": {
+<                             "items": {
+<                                 "$schema": "http://json-schema.org/draft-04/schema#",
 <                                 "properties": {
-<                                     "keys": {
+<                                     "certificate_chain": {
+<                                         "$ref": "envoy.api.v2.core.DataSource",
+<                                         "additionalProperties": true,
+<                                         "type": "object"
+<                                     },
+<                                     "private_key": {
+<                                         "$ref": "envoy.api.v2.core.DataSource",
+<                                         "additionalProperties": true,
+<                                         "type": "object"
+<                                     },
+<                                     "private_key_provider": {
+<                                         "properties": {
+<                                             "provider_name": {
+<                                                 "properties": {},
+<                                                 "type": "string"
+<                                             },
+<                                             "config": {
+<                                                 "$ref": "google.protobuf.Struct",
+<                                                 "additionalProperties": true,
+<                                                 "type": "object"
+<                                             },
+<                                             "typed_config": {
+<                                                 "$ref": "google.protobuf.Any",
+<                                                 "additionalProperties": true,
+<                                                 "type": "object"
+<                                             }
+<                                         },
+<                                         "additionalProperties": true,
+<                                         "type": "object"
+<                                     },
+<                                     "password": {
+<                                         "$ref": "envoy.api.v2.core.DataSource",
+<                                         "additionalProperties": true,
+<                                         "type": "object"
+<                                     },
+<                                     "ocsp_staple": {
+<                                         "$ref": "envoy.api.v2.core.DataSource",
+<                                         "additionalProperties": true,
+<                                         "type": "object"
+<                                     },
+<                                     "signed_certificate_timestamp": {
 <                                         "items": {
 <                                             "$schema": "http://json-schema.org/draft-04/schema#",
 <                                             "$ref": "envoy.api.v2.core.DataSource"
@@ -209,96 +137,118 @@
 <                                 "additionalProperties": true,
 <                                 "type": "object"
 <                             },
-<                             "session_ticket_keys_sds_secret_config": {
-<                                 "$ref": "envoy.api.v2.auth.SdsSecretConfig",
-<                                 "additionalProperties": true,
-<                                 "type": "object"
-<                             },
-<                             "disable_stateless_session_resumption": {
-<                                 "properties": {},
-<                                 "type": "boolean"
-<                             },
-<                             "session_timeout": {
-<                                 "$ref": "google.protobuf.Duration",
-<                                 "additionalProperties": true,
-<                                 "type": "object"
-<                             }
+<                             "properties": {},
+<                             "type": "array"
 <                         },
-<                         "additionalProperties": true,
-<                         "type": "object"
-<                     },
-379,383d162
-<                                 "config": {
-<                                     "$ref": "google.protobuf.Struct",
+<                         "tls_certificate_sds_secret_configs": {
+<                             "items": {
+<                                 "$schema": "http://json-schema.org/draft-04/schema#",
+<                                 "$ref": "envoy.api.v2.auth.SdsSecretConfig"
+<                             },
+<                             "properties": {},
+<                             "type": "array"
+<                         },
+<                         "validation_context": {
+<                             "$ref": "envoy.api.v2.auth.CertificateValidationContext",
+<                             "additionalProperties": true,
+<                             "type": "object"
+<                         },
+<                         "validation_context_sds_secret_config": {
+<                             "$ref": "envoy.api.v2.auth.SdsSecretConfig",
+<                             "additionalProperties": true,
+<                             "type": "object"
+<                         },
+<                         "combined_validation_context": {
+<                             "properties": {
+<                                 "default_validation_context": {
+<                                     "$ref": "envoy.api.v2.auth.CertificateValidationContext",
 <                                     "additionalProperties": true,
 <                                     "type": "object"
 <                                 },
-402c181
-<                         "$ref": "envoy.api.v2.core.Metadata",
----
->                         "$ref": "envoy.config.core.v3.Metadata",
-412,416d190
-<                             "config": {
-<                                 "$ref": "google.protobuf.Struct",
-<                                 "additionalProperties": true,
-<                                 "type": "object"
+<                                 "validation_context_sds_secret_config": {
+<                                     "$ref": "envoy.api.v2.auth.SdsSecretConfig",
+<                                     "additionalProperties": true,
+<                                     "type": "object"
+<                                 }
 <                             },
-437,441d210
-<         "use_original_dst": {
-<             "$ref": "google.protobuf.BoolValue",
+<                             "additionalProperties": true,
+<                             "type": "object"
+<                         },
+<                         "alpn_protocols": {
+<                             "items": {
+<                                 "type": "string"
+<                             },
+<                             "properties": {},
+<                             "type": "array"
+<                         }
+<                     },
+<                     "additionalProperties": true,
+<                     "type": "object"
+<                 },
+<                 "require_client_certificate": {
+<                     "$ref": "google.protobuf.BoolValue",
+<                     "additionalProperties": true,
+<                     "type": "object"
+<                 },
+<                 "require_sni": {
+<                     "$ref": "google.protobuf.BoolValue",
+<                     "additionalProperties": true,
+<                     "type": "object"
+<                 },
+<                 "session_ticket_keys": {
+<                     "properties": {
+<                         "keys": {
+<                             "items": {
+<                                 "$schema": "http://json-schema.org/draft-04/schema#",
+<                                 "$ref": "envoy.api.v2.core.DataSource"
+<                             },
+<                             "properties": {},
+<                             "type": "array"
+<                         }
+<                     },
+<                     "additionalProperties": true,
+<                     "type": "object"
+<                 },
+<                 "session_ticket_keys_sds_secret_config": {
+<                     "$ref": "envoy.api.v2.auth.SdsSecretConfig",
+<                     "additionalProperties": true,
+<                     "type": "object"
+<                 },
+<                 "disable_stateless_session_resumption": {
+<                     "properties": {},
+<                     "type": "boolean"
+<                 },
+<                 "session_timeout": {
+<                     "$ref": "google.protobuf.Duration",
+<                     "additionalProperties": true,
+<                     "type": "object"
+<                 }
+<             },
 <             "additionalProperties": true,
 <             "type": "object"
 <         },
-448c217
-<             "$ref": "envoy.api.v2.core.Metadata",
----
->             "$ref": "envoy.config.core.v3.Metadata",
-488,492d256
+308,312d91
 <                     "config": {
 <                         "$ref": "google.protobuf.Struct",
 <                         "additionalProperties": true,
 <                         "type": "object"
 <                     },
-499c263
-<                         "$ref": "envoy.api.v2.listener.ListenerFilterChainMatchPredicate",
----
->                         "$ref": "envoy.config.listener.v3.ListenerFilterChainMatchPredicate",
-511c275,291
-<             "$ref": "google.protobuf.Duration",
+326c105,110
+<             "$ref": "google.protobuf.BoolValue",
 ---
 >             "properties": {
->                 "seconds": {
+>                 "value": {
 >                     "properties": {},
->                     "oneOf": [
->                         {
->                             "type": "integer"
->                         },
->                         {
->                             "type": "string"
->                         }
->                     ]
->                 },
->                 "nanos": {
->                     "properties": {},
->                     "type": "integer"
+>                     "type": "boolean"
 >                 }
 >             },
-618,622d397
+351,355d134
 <                 "config": {
 <                     "$ref": "google.protobuf.Struct",
 <                     "additionalProperties": true,
 <                     "type": "object"
 <                 },
-667,672c442
-<                         "$ref": "envoy.config.filter.accesslog.v2.AccessLogFilter",
-<                         "additionalProperties": true,
-<                         "type": "object"
-<                     },
-<                     "config": {
-<                         "$ref": "google.protobuf.Struct",
----
->                         "$ref": "envoy.config.accesslog.v3.AccessLogFilter",
-692,1263c462
+373,849c152
 <         "envoy.api.v2.auth.CertificateValidationContext": {
 <             "$schema": "http://json-schema.org/draft-04/schema#",
 <             "properties": {
@@ -349,7 +299,23 @@
 <                                 "type": "string"
 <                             },
 <                             "safe_regex": {
-<                                 "$ref": "envoy.type.matcher.RegexMatcher",
+<                                 "properties": {
+<                                     "google_re2": {
+<                                         "properties": {
+<                                             "max_program_size": {
+<                                                 "$ref": "google.protobuf.UInt32Value",
+<                                                 "additionalProperties": true,
+<                                                 "type": "object"
+<                                             }
+<                                         },
+<                                         "additionalProperties": true,
+<                                         "type": "object"
+<                                     },
+<                                     "regex": {
+<                                         "properties": {},
+<                                         "type": "string"
+<                                     }
+<                                 },
 <                                 "additionalProperties": true,
 <                                 "type": "object"
 <                             },
@@ -760,20 +726,9 @@
 <             "id": "envoy.api.v2.auth.SdsSecretConfig"
 <         },
 <         "envoy.api.v2.core.CidrRange": {
-<             "$schema": "http://json-schema.org/draft-04/schema#",
-<             "properties": {
-<                 "address_prefix": {
-<                     "properties": {},
-<                     "type": "string"
-<                 },
-<                 "prefix_len": {
-<                     "$ref": "google.protobuf.UInt32Value",
-<                     "additionalProperties": true,
-<                     "type": "object"
-<                 }
-<             },
-<             "additionalProperties": true,
-<             "type": "object",
+---
+>         "envoy.config.core.v3.CidrRange": {
+864,884c167
 <             "id": "envoy.api.v2.core.CidrRange"
 <         },
 <         "envoy.api.v2.core.DataSource": {
@@ -795,267 +750,26 @@
 <             "additionalProperties": true,
 <             "type": "object",
 <             "id": "envoy.api.v2.core.DataSource"
-<         },
-<         "envoy.api.v2.core.Metadata": {
-<             "$schema": "http://json-schema.org/draft-04/schema#",
-<             "properties": {
-<                 "filter_metadata": {
-<                     "properties": {},
-<                     "additionalProperties": {
-<                         "$ref": "google.protobuf.Struct",
-<                         "additionalProperties": true,
-<                         "type": "object"
-<                     },
-<                     "type": "object"
-<                 }
-<             },
-<             "additionalProperties": true,
-<             "type": "object",
-<             "id": "envoy.api.v2.core.Metadata"
-<         },
-<         "envoy.api.v2.listener.ListenerFilterChainMatchPredicate": {
-<             "$schema": "http://json-schema.org/draft-04/schema#",
-<             "properties": {
-<                 "or_match": {
-<                     "$ref": "envoy.api.v2.listener.ListenerFilterChainMatchPredicate.MatchSet",
-<                     "additionalProperties": true,
-<                     "type": "object"
-<                 },
-<                 "and_match": {
-<                     "$ref": "envoy.api.v2.listener.ListenerFilterChainMatchPredicate.MatchSet",
-<                     "additionalProperties": true,
-<                     "type": "object"
-<                 },
-<                 "not_match": {
-<                     "$ref": "envoy.api.v2.listener.ListenerFilterChainMatchPredicate",
-<                     "additionalProperties": true,
-<                     "type": "object"
-<                 },
-<                 "any_match": {
-<                     "properties": {},
-<                     "type": "boolean"
-<                 },
-<                 "destination_port_range": {
-<                     "properties": {
-<                         "start": {
-<                             "properties": {},
-<                             "type": "integer"
-<                         },
-<                         "end": {
-<                             "properties": {},
-<                             "type": "integer"
-<                         }
-<                     },
-<                     "additionalProperties": true,
-<                     "type": "object"
-<                 }
-<             },
-<             "additionalProperties": true,
-<             "type": "object",
-<             "id": "envoy.api.v2.listener.ListenerFilterChainMatchPredicate"
-<         },
-<         "envoy.api.v2.listener.ListenerFilterChainMatchPredicate.MatchSet": {
-<             "$schema": "http://json-schema.org/draft-04/schema#",
-<             "properties": {
-<                 "rules": {
-<                     "items": {
-<                         "$schema": "http://json-schema.org/draft-04/schema#",
-<                         "$ref": "envoy.api.v2.listener.ListenerFilterChainMatchPredicate"
-<                     },
-<                     "properties": {},
-<                     "type": "array"
-<                 }
-<             },
-<             "additionalProperties": true,
-<             "type": "object",
-<             "id": "envoy.api.v2.listener.ListenerFilterChainMatchPredicate.MatchSet"
-<         },
-<         "envoy.config.filter.accesslog.v2.AccessLogFilter": {
----
->         "envoy.config.accesslog.v3.AccessLogFilter": {
-1269c468
-<                             "$ref": "envoy.config.filter.accesslog.v2.ComparisonFilter",
----
->                             "$ref": "envoy.config.accesslog.v3.ComparisonFilter",
-1280c479
-<                             "$ref": "envoy.config.filter.accesslog.v2.ComparisonFilter",
----
->                             "$ref": "envoy.config.accesslog.v3.ComparisonFilter",
-1346c545
-<                                 "$ref": "envoy.config.filter.accesslog.v2.AccessLogFilter"
----
->                                 "$ref": "envoy.config.accesslog.v3.AccessLogFilter"
-1360c559
-<                                 "$ref": "envoy.config.filter.accesslog.v2.AccessLogFilter"
----
->                                 "$ref": "envoy.config.accesslog.v3.AccessLogFilter"
-1381,1384d579
-<                                 "regex_match": {
-<                                     "properties": {},
-<                                     "type": "string"
-<                                 },
-1386c581,597
-<                                     "$ref": "envoy.type.matcher.RegexMatcher",
----
->                                     "properties": {
->                                         "google_re2": {
->                                             "properties": {
->                                                 "max_program_size": {
->                                                     "$ref": "google.protobuf.UInt32Value",
->                                                     "additionalProperties": true,
->                                                     "type": "object"
->                                                 }
->                                             },
->                                             "additionalProperties": true,
->                                             "type": "object"
->                                         },
->                                         "regex": {
->                                             "properties": {},
->                                             "type": "string"
->                                         }
->                                     },
-1513,1517d723
-<                         "config": {
-<                             "$ref": "google.protobuf.Struct",
-<                             "additionalProperties": true,
-<                             "type": "object"
-<                         },
-1530c736
-<             "id": "envoy.config.filter.accesslog.v2.AccessLogFilter"
----
->             "id": "envoy.config.accesslog.v3.AccessLogFilter"
-1532c738
-<         "envoy.config.filter.accesslog.v2.ComparisonFilter": {
----
->         "envoy.config.accesslog.v3.ComparisonFilter": {
-1571c777
-<             "id": "envoy.config.filter.accesslog.v2.ComparisonFilter"
----
->             "id": "envoy.config.accesslog.v3.ComparisonFilter"
-1573c779
-<         "envoy.type.matcher.RegexMatcher": {
----
->         "envoy.config.core.v3.CidrRange": {
-1576,1587c782
-<                 "google_re2": {
-<                     "properties": {
-<                         "max_program_size": {
-<                             "$ref": "google.protobuf.UInt32Value",
-<                             "additionalProperties": true,
-<                             "type": "object"
-<                         }
-<                     },
-<                     "additionalProperties": true,
-<                     "type": "object"
-<                 },
-<                 "regex": {
----
->                 "address_prefix": {
-1589a785,789
->                 },
->                 "prefix_len": {
->                     "$ref": "google.protobuf.UInt32Value",
->                     "additionalProperties": true,
->                     "type": "object"
-1594c794
-<             "id": "envoy.type.matcher.RegexMatcher"
 ---
 >             "id": "envoy.config.core.v3.CidrRange"
-1596c796
-<         "google.protobuf.Any": {
----
->         "envoy.config.core.v3.Metadata": {
-1599c799
-<                 "type_url": {
----
->                 "filter_metadata": {
-1601c801,819
-<                     "type": "string"
----
->                     "additionalProperties": {
->                         "$ref": "google.protobuf.Struct",
->                         "additionalProperties": true,
->                         "type": "object"
->                     },
->                     "type": "object"
->                 }
->             },
->             "additionalProperties": true,
->             "type": "object",
->             "id": "envoy.config.core.v3.Metadata"
->         },
->         "envoy.config.listener.v3.ListenerFilterChainMatchPredicate": {
->             "$schema": "http://json-schema.org/draft-04/schema#",
->             "properties": {
->                 "or_match": {
->                     "$ref": "envoy.config.listener.v3.ListenerFilterChainMatchPredicate.MatchSet",
->                     "additionalProperties": true,
->                     "type": "object"
-1603c821,831
-<                 "value": {
----
->                 "and_match": {
->                     "$ref": "envoy.config.listener.v3.ListenerFilterChainMatchPredicate.MatchSet",
->                     "additionalProperties": true,
->                     "type": "object"
->                 },
->                 "not_match": {
->                     "$ref": "envoy.config.listener.v3.ListenerFilterChainMatchPredicate",
->                     "additionalProperties": true,
->                     "type": "object"
->                 },
->                 "any_match": {
-1605c833,847
-<                     "type": "string"
----
->                     "type": "boolean"
->                 },
->                 "destination_port_range": {
->                     "properties": {
->                         "start": {
->                             "properties": {},
->                             "type": "integer"
->                         },
->                         "end": {
->                             "properties": {},
->                             "type": "integer"
->                         }
->                     },
->                     "additionalProperties": true,
->                     "type": "object"
-1610c852
-<             "id": "google.protobuf.Any"
----
->             "id": "envoy.config.listener.v3.ListenerFilterChainMatchPredicate"
-1612c854
+902,943d184
 <         "google.protobuf.BoolValue": {
----
->         "envoy.config.listener.v3.ListenerFilterChainMatchPredicate.MatchSet": {
-1615c857,861
+<             "$schema": "http://json-schema.org/draft-04/schema#",
+<             "properties": {
 <                 "value": {
----
->                 "rules": {
->                     "items": {
->                         "$schema": "http://json-schema.org/draft-04/schema#",
->                         "$ref": "envoy.config.listener.v3.ListenerFilterChainMatchPredicate"
->                     },
-1617c863
+<                     "properties": {},
 <                     "type": "boolean"
----
->                     "type": "array"
-1622c868
+<                 }
+<             },
+<             "additionalProperties": true,
+<             "type": "object",
 <             "id": "google.protobuf.BoolValue"
----
->             "id": "envoy.config.listener.v3.ListenerFilterChainMatchPredicate.MatchSet"
-1624c870
+<         },
 <         "google.protobuf.Duration": {
----
->         "google.protobuf.Any": {
-1627c873
+<             "$schema": "http://json-schema.org/draft-04/schema#",
+<             "properties": {
 <                 "seconds": {
----
->                 "type_url": {
-1629,1636c875
+<                     "properties": {},
 <                     "oneOf": [
 <                         {
 <                             "type": "integer"
@@ -1064,34 +778,20 @@
 <                             "type": "string"
 <                         }
 <                     ]
----
->                     "type": "string"
-1638c877
+<                 },
 <                 "nanos": {
----
->                 "value": {
-1640c879
+<                     "properties": {},
 <                     "type": "integer"
----
->                     "type": "string"
-1645c884
+<                 }
+<             },
+<             "additionalProperties": true,
+<             "type": "object",
 <             "id": "google.protobuf.Duration"
----
->             "id": "google.protobuf.Any"
-1647c886
+<         },
 <         "google.protobuf.Empty": {
----
->         "google.protobuf.BoolValue": {
-1649c888,893
+<             "$schema": "http://json-schema.org/draft-04/schema#",
 <             "properties": {},
----
->             "properties": {
->                 "value": {
->                     "properties": {},
->                     "type": "boolean"
->                 }
->             },
-1652c896
+<             "additionalProperties": true,
+<             "type": "object",
 <             "id": "google.protobuf.Empty"
----
->             "id": "google.protobuf.BoolValue"
+<         },

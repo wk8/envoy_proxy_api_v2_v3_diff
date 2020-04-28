@@ -23,11 +23,73 @@
             },
             "additionalProperties": true,
             "type": "object"
+        },
+        "filter_disabled": {
+            "$ref": "envoy.api.v2.listener.ListenerFilterChainMatchPredicate",
+            "additionalProperties": true,
+            "type": "object"
         }
     },
     "additionalProperties": true,
     "type": "object",
     "definitions": {
+        "envoy.api.v2.listener.ListenerFilterChainMatchPredicate": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "or_match": {
+                    "$ref": "envoy.api.v2.listener.ListenerFilterChainMatchPredicate.MatchSet",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "and_match": {
+                    "$ref": "envoy.api.v2.listener.ListenerFilterChainMatchPredicate.MatchSet",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "not_match": {
+                    "$ref": "envoy.api.v2.listener.ListenerFilterChainMatchPredicate",
+                    "additionalProperties": true,
+                    "type": "object"
+                },
+                "any_match": {
+                    "properties": {},
+                    "type": "boolean"
+                },
+                "destination_port_range": {
+                    "properties": {
+                        "start": {
+                            "properties": {},
+                            "type": "integer"
+                        },
+                        "end": {
+                            "properties": {},
+                            "type": "integer"
+                        }
+                    },
+                    "additionalProperties": true,
+                    "type": "object"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "envoy.api.v2.listener.ListenerFilterChainMatchPredicate"
+        },
+        "envoy.api.v2.listener.ListenerFilterChainMatchPredicate.MatchSet": {
+            "$schema": "http://json-schema.org/draft-04/schema#",
+            "properties": {
+                "rules": {
+                    "items": {
+                        "$schema": "http://json-schema.org/draft-04/schema#",
+                        "$ref": "envoy.api.v2.listener.ListenerFilterChainMatchPredicate"
+                    },
+                    "properties": {},
+                    "type": "array"
+                }
+            },
+            "additionalProperties": true,
+            "type": "object",
+            "id": "envoy.api.v2.listener.ListenerFilterChainMatchPredicate.MatchSet"
+        },
         "google.protobuf.Struct": {
             "$schema": "http://json-schema.org/draft-04/schema#",
             "properties": {
